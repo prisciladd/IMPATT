@@ -6,8 +6,8 @@ const Styles= styled.div`
     height: 100%;
     display: flex;
     justify-content: right;
-    position:relative;
-    float:right;
+    position: relative;
+    float: right;
 
     .box{
     border-radius: 5px ;
@@ -59,8 +59,10 @@ function User(){
         <Styles>
                 <div className="box">
                 <img alt="" src="/user.png"></img>
+                <div id="ra">
                 <p>Olá, Priscila</p>
                 <p>Ra: 1901843</p>
+                </div>
                 <p>Curso: Sistemas de Informação</p>
                 <div className="buttons">
                     <button>SAIR</button>

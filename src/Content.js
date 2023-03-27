@@ -2,10 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const Styles= styled.div`    
-    width:40%;
-    height:100%;
+    width:100vw;
+    height:100vh;
     display:flex;
     justify-content: center;
+    background-color: grey;
 
 `;
 

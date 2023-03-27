@@ -7,10 +7,10 @@ const StyledDiv= styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     color: black;
-    position:relative;
+    position:absolute;
     float:left;
+    background-color: gold;
   
 
 `
