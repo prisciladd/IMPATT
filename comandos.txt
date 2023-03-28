@@ -1,3 +1,6 @@
 ****PUSH NOTIFICATIONS***
 npm i react-wonderpush --force
+****RESOLVENDO ERRO DE DEPENDENCIA
 npm install --legacy-peer-deps
+npm install npm -g
+
