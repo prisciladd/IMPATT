@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import '../public/index.html'
 import Header from "./Header"
 import User from './User';
 import Content from './Content';
