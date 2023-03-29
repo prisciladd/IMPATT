@@ -20,6 +20,7 @@ function Header (){
 
             <img alt="" src="/logoHeader2.png"></img>
             
+            
         </div>
 
         </StyledDiv>
