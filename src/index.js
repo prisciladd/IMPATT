@@ -1,13 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import './index.css';
 import App from './App';
+import Home from './components/Home'
+import NotasFaltas from './components/NotasFaltas'
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+     <Router>
+            <App>
+                <Switch>
+                    <Route exact path="/" component={Home}/>
+                    <Route path="/notas-faltas" component={NotasFaltas}/>
+                </Switch>
+            </App>
+        </Router>
   </React.StrictMode>
 );
 

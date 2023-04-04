@@ -1,0 +1,24 @@
+.menu {
+
+    height:100%;
+    width:15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    color: black;
+    float:left;
+    background-color: gold;
+  
+}
+
+.menu h4 {
+    color: #002953;
+    font-family: EurostileBold, "Trebuchet MS", sans-serif;
+
+    font-family: "EurostileBold", "Trebuchet MS", sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 13px;
+    ;
+}
