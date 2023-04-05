@@ -3,7 +3,7 @@ import { useState } from 'react';
 import {withRouter} from 'react-router-dom';
 
 import '../src/content.css'
-
+import './App.css'
 import Header from './components/Header';
 import Menu from './components/Menu';
 import User from './components/User';
@@ -44,16 +44,16 @@ function App(props) {
 
 
   return (
-    <div className="App">
+    <div className="app">
+ 
         <Header />
         <User/> 
-        <Menu />
-        <div id="main">
-            <main>
+        <Menu/>
+
+        <div className="main">
                 <div className="content" id="content">
                     {props.children}
                 </div>
-            </main>
         </div>
    
     </div>
