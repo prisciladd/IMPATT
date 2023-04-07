@@ -1,18 +1,15 @@
-import React from "react";
-import './User.css'
-import styled from "styled-components";
-
-const Styles= styled.div`
-
-
+.user{
     width: 80%;
     height: 100%;
     display: flex;
     justify-content: right;
     position: relative;
     float: right;
+}    
 
-    .box{
+
+
+   .box{
     border-radius: 5px ;
     background-color: #DDD;
     display: flex;
@@ -54,29 +51,3 @@ const Styles= styled.div`
     .buttons{
         position:relative;
     }
-
-`;
-
-function User(){
-    return(
-        <div className="user">
-            <div className="box">
-                <img alt="" src="/user.png"></img>
-                 <div className="ra">
-                        <p>Olá, Priscila</p>
-                        <p>Ra: 1901843</p>
-                </div>
-                <p>Curso: Sistemas de Informação</p>
-                <div className="buttons">
-                    <button>SAIR</button>
-                    <button>Área do Aluno</button>
-                </div>
-                </div>
-               
-        </div>
-
-    );
-
-}
-
-export default User;
