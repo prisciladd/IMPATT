@@ -5,6 +5,7 @@ import Header from "./Header"
 import User from './User';
 import Content from './Content';
 import Menu from './Menu';
+import { A2HSProvider } from  'react-a2hs';
 
 let deferredPrompt;
 const addBtn = document.querySelector(".add-button");
@@ -43,5 +44,6 @@ root.render(
         <User/>
         <Menu />
         <Content />
+        <A2HSProvider title="IMPATT" position="top-right" />
   </React.StrictMode>
 );

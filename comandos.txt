@@ -1,4 +1,7 @@
 ****PUSH NOTIFICATIONS***
 npm i react-wonderpush --force
 
+****ADD TO HOME SCREEN A2HS***
+npm install --save react-a2hs --legacy-peer-deps
+
 
