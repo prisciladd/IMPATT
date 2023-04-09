@@ -1,7 +1,10 @@
 import React from "react";
+import './User.css'
 import styled from "styled-components";
 
 const Styles= styled.div`
+
+
     width: 80%;
     height: 100%;
     display: flex;
@@ -11,7 +14,7 @@ const Styles= styled.div`
 
     .box{
     border-radius: 5px ;
-    background-color: gray;
+    background-color: #DDD;
     display: flex;
     width:100vh;
     margin:5px;
@@ -56,12 +59,12 @@ const Styles= styled.div`
 
 function User(){
     return(
-        <Styles>
-                <div className="box">
+        <div className="user">
+            <div className="box">
                 <img alt="" src="/user.png"></img>
-                <div id="ra">
-                <p>Olá, Priscila</p>
-                <p>Ra: 1901843</p>
+                 <div className="ra">
+                        <p>Olá, Priscila</p>
+                        <p>Ra: 1901843</p>
                 </div>
                 <p>Curso: Sistemas de Informação</p>
                 <div className="buttons">
@@ -70,7 +73,8 @@ function User(){
                 </div>
                 </div>
                
-        </Styles>
+        </div>
+
     );
 
 }

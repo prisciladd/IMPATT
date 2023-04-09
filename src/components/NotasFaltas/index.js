@@ -14,7 +14,7 @@ function Content(){
     return(
         <Styles>
                 
-                <h1>Mural de Recados</h1>
+                <h1>Notas e Faltas</h1>
                 
         </Styles>
     );
