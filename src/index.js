@@ -1,17 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
 import './index.css';
-import App from './App';
 import Home from './components/Home';
-import { A2HSProvider } from  'react-a2hs';
-import Header from "./Header";
 import NotasFaltas from './components/NotasFaltas';
-import User from './User';
-import Content from './Content';
-import Menu from './Menu';
-
+import { A2HSProvider } from  'react-a2hs';
 
 let deferredPrompt;
 const addBtn = document.querySelector(".add-button");
@@ -42,21 +35,15 @@ addBtn.style.display = "none";
   });
 });
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot( document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
-            <App>
-                <Switch>
-                    <Route exact path="/" component={Home}/>
-                    <Route path="/notas-faltas" component={NotasFaltas}/>
-                </Switch>
-            </App>
-        </Router> 
-        <Header />
-        <User/>
-        <Menu />
-        <Content />
-        <A2HSProvider title="IMPATT" position="top-right" />
+    <Router> 
+      <Switch>
+        <Route exact path="/" component={Home}/>
+        <Route path="/notas-faltas" component={NotasFaltas}/>
+      </Switch>
+    </Router> 
+    <A2HSProvider title="IMPATT" position="top-right" />
   </React.StrictMode>
 );
