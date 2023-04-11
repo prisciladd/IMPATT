@@ -1,12 +1,13 @@
-import './ItemMenu.css'
+import "./ItemMenu.css";
 
-const ItemMenu = (props) =>{
+const ItemMenu = (props) => {
+  return (
+    <div className="itemMenu">
+      <ul>
+        <a href={props.path}>{props.name}</a>
+      </ul>
+    </div>
+  );
+};
 
-    return (
-        <div className='itemMenu'>
-            <ul>{props.name}</ul>
-        </div>
-    )
-}
-
-export default ItemMenu
+export default ItemMenu;
