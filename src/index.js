@@ -1,16 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import './index.css';
-import Home from './components/Home';
-import NotasFaltas from './components/NotasFaltas';
-import { A2HSProvider } from  'react-a2hs';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "./index.css";
+import Home from "./components/Home";
+import NotasFaltas from "./components/NotasFaltas";
+import { A2HSProvider } from "react-a2hs";
+import App from "./App";
 
 let deferredPrompt;
 const addBtn = document.querySelector(".add-button");
-addBtn.style.display = "none";
+//addBtn.style.display = "none"; // ele quebra a aplicacao
 
-  window.addEventListener("beforeinstallprompt", (e) => {
+window.addEventListener("beforeinstallprompt", (e) => {
   // Prevent Chrome 67 and earlier from automatically showing the prompt
   e.preventDefault();
   // Stash the event so it can be triggered later.
@@ -35,15 +36,16 @@ addBtn.style.display = "none";
   });
 });
 
-const root = ReactDOM.createRoot( document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Router> 
+    <Router>
       <Switch>
-        <Route exact path="/" component={Home}/>
-        <Route path="/notas-faltas" component={NotasFaltas}/>
+        <App>
+          <Route exact path="/" component={Home} />
+          <Route path="/notas-faltas" component={NotasFaltas} />
+        </App>
       </Switch>
-    </Router> 
-    <A2HSProvider title="IMPATT" position="top-right" />
+    </Router>
   </React.StrictMode>
 );
