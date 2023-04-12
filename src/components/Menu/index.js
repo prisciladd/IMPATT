@@ -1,32 +1,19 @@
-import styled from "styled-components";
-
-const StyledDiv= styled.div`
-
-    text-align: center;  
-    height:100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: black;
-    position:absolute;
-    float:left;
-    background-color: gold;
-  
-
-`
+import ItemMenu from "./ItemMenu";
+import "./Menu.css";
 
 function Menu() {
-    return (
-        <StyledDiv>
+  return (
+    <section className="menu">
+      <h4>Acesso Rápido</h4>
+      <ItemMenu path={"/notas-faltas"} name="Secretaria Online" />
+      <ItemMenu path={"/notas-faltas"} name="Notas e faltas" />
+      <ItemMenu path={"/notas-faltas"} name="Atividades Complementares" />
+      <ItemMenu
+        root={"/notas-faltas"}
+        name="Requerimentos (Secretaria/Financeiro)"
+      />
+    </section>
+  );
+}
 
-            <header className="App-header">
-            <h1>Acesso Rápido</h1>
-            </header>
-   
-
-        </StyledDiv>
-    );
-  }
-  
-  export default Menu;
-  
+export default Menu;

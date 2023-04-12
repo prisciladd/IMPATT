@@ -1,24 +1,17 @@
 import React from "react";
-import styled from "styled-components";
+import './Home.css';
 
-const Styles= styled.div`    
-    width:100vw;
-    height:100vh;
-    display:flex;
-    justify-content: center;
-    background-color: grey;
 
-`;
 
-function Content(){
+const Home = () =>{
     return(
-        <Styles>
-                
-                <h1>Mural de Recados</h1>
-                
-        </Styles>
+        <div className="home">
+            <h3>Mural de Recados</h3>
+            
+        </div>
+ 
     );
 
 }
 
-export default Content;
+export default Home;
