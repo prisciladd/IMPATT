@@ -4,7 +4,7 @@ import "./Menu.css";
 function Menu() {
   return (
     <section className="menu">
-      <h4>Acesso Rápido</h4>
+      <h4>ACESSO RÁPIDO</h4>
       <ItemMenu path={"/notas-faltas"} name="Secretaria Online" />
       <ItemMenu path={"/notas-faltas"} name="Notas e faltas" />
       <ItemMenu path={"/notas-faltas"} name="Atividades Complementares" />

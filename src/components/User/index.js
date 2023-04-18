@@ -1,11 +1,9 @@
 import React from "react";
-import './User.css'
 import styled from "styled-components";
 
 const Styles= styled.div`
 
-
-    width: 80%;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: right;
@@ -14,7 +12,7 @@ const Styles= styled.div`
 
     .box{
     border-radius: 5px ;
-    background-color: #DDD;
+    background-color: #e1e1e1;
     display: flex;
     width:100vh;
     margin:5px;
@@ -36,7 +34,7 @@ const Styles= styled.div`
         margin-right:5px;
     }
     
-    button:first-child{
+    button:last-child{
         background-color: red ;
         border-color:red;
         margin-right:5px;
@@ -49,6 +47,8 @@ const Styles= styled.div`
 
     p{
         font-size:12px;
+        margin:2px;
+        
     }
 
     .buttons{
@@ -59,6 +59,7 @@ const Styles= styled.div`
 
 function User(){
     return(
+        <Styles>
         <div className="user">
             <div className="box">
                 <img alt="" src="/user.png"></img>
@@ -68,12 +69,13 @@ function User(){
                 </div>
                 <p>Curso: Sistemas de Informação</p>
                 <div className="buttons">
-                    <button>SAIR</button>
                     <button>Área do Aluno</button>
+                    <button>SAIR</button>
                 </div>
                 </div>
                
         </div>
+        </Styles>
 
     );
 

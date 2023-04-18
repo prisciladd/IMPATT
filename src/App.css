@@ -2,3 +2,9 @@
     display: flex;
     flex-direction: column;
 }
+
+.main{
+    position:absolute;
+    margin-top:180px;
+    margin-left:230px;
+}
