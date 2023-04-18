@@ -5,6 +5,7 @@
     justify-content: right;
     position: relative;
     float: right;
+    margin-left: auto;
 }    
 
 
@@ -34,8 +35,8 @@
     }
     
     button:first-child{
-        background-color: red ;
-        border-color:red;
+        background-color: #C73E38 ;
+        border-color:#C73E38;
         margin-right:5px;
     }
 

@@ -27,8 +27,8 @@ const Styles= styled.div`
     }
     
     button {
-        background-color: black ;
-        border-color: black ;
+        background-color: #454545 ;
+        border-color: #454545 ;
         color: white;
         border-radius:5px;
         height: 30px;   
@@ -37,8 +37,8 @@ const Styles= styled.div`
     }
     
     button:first-child{
-        background-color: red ;
-        border-color:red;
+        background-color: #C73E38 ;
+        border-color:#C73E38;
         margin-right:5px;
     }
 
@@ -59,21 +59,23 @@ const Styles= styled.div`
 
 function User(){
     return(
-        <div className="user">
-            <div className="box">
-                <img alt="" src="/user.png"></img>
-                 <div className="ra">
-                        <p>Olá, Priscila</p>
-                        <p>Ra: 1901843</p>
-                </div>
-                <p>Curso: Sistemas de Informação</p>
-                <div className="buttons">
-                    <button>SAIR</button>
-                    <button>Área do Aluno</button>
-                </div>
-                </div>
-               
-        </div>
+        <Styles>
+            <div className="user">
+                <div className="box">
+                    <img alt="" src="/user.png"></img>
+                    <div className="ra">
+                            <p>Olá, Priscila</p>
+                            <p>Ra: 1901843</p>
+                    </div>
+                    <p>Curso: Sistemas de Informação</p>
+                    <div className="buttons">
+                        <button>SAIR</button>
+                        <button>Área do Aluno</button>
+                    </div>
+                    </div>
+                
+            </div>
+        </Styles>
 
     );
 
