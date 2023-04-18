@@ -4,7 +4,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./index.css";
 import Home from "./components/Home";
 import NotasFaltas from "./components/NotasFaltas";
-import { A2HSProvider } from "react-a2hs";
+import Boletim from "./components/Boletim";
+import ModalBoletim from "./components/ModalBoletim";
+//import { A2HSProvider } from "react-a2hs";
 import App from "./App";
 
 let deferredPrompt;
@@ -43,7 +45,9 @@ root.render(
       <Switch>
         <App>
           <Route exact path="/" component={Home} />
-          <Route path="/notas-faltas" component={NotasFaltas} />
+          <Route path="/NotasFaltas" component={NotasFaltas} />
+          <Route path="/Boletim" component={Boletim} />
+          <Route path="/ModalBoletim" component={ModalBoletim} /> {/* Rota para o modal */}
         </App>
       </Switch>
     </Router>

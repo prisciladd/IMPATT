@@ -25,8 +25,8 @@ const Styles= styled.div`
     }
     
     button {
-        background-color: black ;
-        border-color: black ;
+        background-color: #454545 ;
+        border-color: #454545 ;
         color: white;
         border-radius:5px;
         height: 30px;   
@@ -35,8 +35,8 @@ const Styles= styled.div`
     }
     
     button:last-child{
-        background-color: red ;
-        border-color:red;
+        background-color: #C73E38 ;
+        border-color:#C73E38;
         margin-right:5px;
     }
 
@@ -69,11 +69,11 @@ function User(){
                 </div>
                 <p>Curso: Sistemas de Informação</p>
                 <div className="buttons">
+
                     <button>Área do Aluno</button>
                     <button>SAIR</button>
                 </div>
                 </div>
-               
         </div>
         </Styles>
 

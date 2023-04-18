@@ -58,44 +58,7 @@ const Home = () =>{
     return(
         <Styles>
         <div className="home">
-            <div className="mural">
-            <h4>MURAL DE RECADOS</h4>
-            <ul>
-                <li>
-                    <p>
-                    CI: 09/2023 - REF.: Atividades Presenciais 03/04 - Campus Paraíso
-                    </p>
-Prezados(as)...</li>
-                <li>
-                    <p>
-                CI 03/2023 - Início das Aulas 2023 - Faculdade Impacta
-                    </p>
-Prezado(a) Aluno(a),
-                </li>
-                <li>
-                    <p>
-
-                Regulamento Prova PAI 2023/1
-                    </p>
-Prezados (as) Alunos (as),
-                </li>
-                <li>
-                    <p>
-                    Notificação Emissão Boletos
-                    </p>
-Prezado(a) Aluno(a),
-                </li>
-                <li>
-                    <p>
-                    Achados e Perdidos
-                    </p>
-Todos os objetos e documentos encontrados nas dependências da Faculdade
-                </li>
-            </ul>
-            </div>
-            <div className="banner">
-                <img src="banner.png" alt="logo faça parte do programa de embaixadores Impacta" />
-            </div>
+            
             
         </div>
         </Styles>
