@@ -17,8 +17,18 @@ const StyledDiv= styled.div`
     float:left;
     background-color: #EFEEEE;
     margin-left: auto;
-  
 
+    h4 {
+    font-weight: bold;
+    font-size: 26px;
+    font-family: 'Calibri';
+    color: #002953;
+}
+
+ul{
+    list-style-type: none;
+    padding:0px;
+}
 `
 
 function Menu() {
@@ -48,8 +58,8 @@ function Menu() {
         <header className="App-header">
         <h4>ACESSO RÁPIDO</h4>
         </header>
-        <li
-            className="menu-vertical_all menu-expand"
+       
+            <div className="menu-vertical_all menu-expand"
             id="menu-vertical_secretaria_online"
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}>
@@ -75,7 +85,8 @@ function Menu() {
                 </a>
             </li>
             </ul>
-        </li>
+                </div>
+       
    
       </StyledDiv>
     
