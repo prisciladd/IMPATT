@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Modal from 'react-modal';
+//import Modal  from 'react-modal';
+import ReactModal from 'react-modal';
 import { Link } from 'react-router-dom';
 import { Styles } from './Styles';
 import ModalBoletim from '../ModalBoletim';
@@ -176,7 +177,7 @@ function Content(){
                           <th class="table-subtitle">
                             <span>MAC</span>
                           {/* <Link to="/ModalBoletim" data-semestre="1"> */}
-                            <a href ="#" data-semestre="1" onClick={handleModalOpen}>
+                            <a href ="./Boletim" data-semestre="1" onClick={handleModalOpen}>
                               <img
                                 className="comp-nota"
                                 alt="Clique aqui e veja a composição das notas de AC"
@@ -368,7 +369,7 @@ function Content(){
                       </tr>
                   </tbody>
                 </table>
-                <Modal
+                <ReactModal
                   isOpen={showModal}
                   onRequestClose={() => setShowModal(false)}
                   contentLabel="Modal"
@@ -377,7 +378,7 @@ function Content(){
                   {/* Conteúdo do modal aqui */}
                   <ModalBoletim />
                   <button onClick={() => setShowModal(false)}>Fechar</button>
-                </Modal>
+                </ReactModal>
 
               </div>
             </div>
