@@ -3,22 +3,17 @@ import styled from "styled-components";
 
 const Styles= styled.div`
 
+    @media (max-width:600px){
+        
+        .home{
+            width: 100%;
+            
+        }
+
+    }
+
 body{
     background-color: #eeeded;
-}
-
-.home{
-    display:flex;
-}
-
-.mural{
-    width: 40vw;
-    
-}
-
-.banner{
-    width: 40vw;
-    
 }
 
 img{
@@ -29,6 +24,8 @@ img{
 ul{
     list-style-type: none;
     padding:0px;
+    position:relative;
+    z-index: 0;
 }
 
 li{
@@ -38,7 +35,6 @@ li{
 }
 
 li:nth-child(n+4){
-    
     background-color: #e1e1e1;
 }
 
@@ -96,7 +92,6 @@ Todos os objetos e documentos encontrados nas dependências da Faculdade
             <div className="banner">
                 <img src="banner.png" alt="logo faça parte do programa de embaixadores Impacta" />
             </div>
-
         </div>
         </Styles>
             
