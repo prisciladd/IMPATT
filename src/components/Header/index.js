@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components"
+import styled from "styled-components";
+import { Container, Box, BoxTitle, BoxText } from "../../pages/Home/HomeStyles";
 
 const StyledDiv = styled.div`
 
@@ -25,13 +26,13 @@ const StyledDiv = styled.div`
 function Header (){
     
     return(
-        <StyledDiv>
-            <header>
-                    <a href="/">
-                        <img alt="Logo Faculdade Impacta" src="/logoHeader2.png"></img>
-                    </a>
-            </header>
-        </StyledDiv>
+            <StyledDiv>
+                <header>
+                        <a href="/">
+                            <img alt="Logo Faculdade Impacta" src="/logoHeader2.png"></img>
+                        </a>
+                </header>
+            </StyledDiv>
     )
 }
 

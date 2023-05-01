@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { BoxText } from "../../pages/Home/HomeStyles";
+import px2vw from "../../utils/px2vw";
 
 const Styles= styled.div`
 
-@media (max-width:600px){
+/* @media (max-width:600px){
         
         .user{
             display: flex;
@@ -16,6 +18,15 @@ const Styles= styled.div`
             align-items: center ;
             width: 100%;
         }
+
+    }
+
+    */
+    @media (max-width: 600px) {
+        display: flex;
+        justify-content: center;
+        width: ${px2vw(320, 320)};
+
 
     }
 
@@ -54,53 +65,41 @@ const Styles= styled.div`
         margin-right:5px;
     }
 
-    .ps{
-        font-size: 0;
-    }
-
-    p{
-        font-size:12px;
-        margin:2px;
-    }
-
     strong{
         padding:5px;
     }
-`;
+ `;
 
 function User(){
     return(
-        <Styles>
-        <div className="user">
-            <div className="box">
-
-                <img alt="" src="/user.png" />
-              
-                <div class="span2">
-                    <p>Olá,  
-                        <strong>Priscila</strong>
-                    </p>
-                    <p>Ra: 
-                        <strong>1901843</strong>
-                    </p>
-                </div>
-                <div class="span2">
-
-                <p>Curso: 
-                    <strong>
-                    Sistemas de Informação
-                    </strong>
-                </p>
-                </div>
-                <div class="span4">
-
-                    <button>SAIR</button>
-                    <button>Área do Aluno</button>
-                </div>
-                </div>
-        </div>
-        </Styles>
-
+                <Styles>
+                    <BoxText>
+                        <div className="user">
+                            <div className="box">
+                                <img alt="" src="/user.png" />
+                                <div class="span2">
+                                    <p>Olá,  
+                                        <strong>Priscila</strong>
+                                    </p>
+                                    <p>Ra: 
+                                        <strong>1901843</strong>
+                                    </p>
+                                </div>
+                                <div class="span2">
+                                    <p>Curso: 
+                                        <strong>
+                                        Sistemas de Informação
+                                        </strong>
+                                    </p>
+                                </div>
+                                <div class="span4">
+                                    <button>SAIR</button>
+                                    <button>Área do Aluno</button>
+                                </div>
+                            </div>
+                        </div>
+                    </BoxText>
+                </Styles>
     );
 
 }
