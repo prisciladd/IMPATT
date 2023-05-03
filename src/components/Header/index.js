@@ -1,29 +1,38 @@
 import React from "react";
-import styled from "styled-components"
+import styled from "styled-components";
+import { Container, Box, BoxTitle, BoxText } from "../../pages/Home/HomeStyles";
 
 const StyledDiv = styled.div`
-    display: flex ;
-    background-color: #505050 ;
+
+    @media (max-width:600px){
+
+        background-color: #002953;
+
+    }
+
+    display:flex;
+    position:relative;
+    position:fixed;
+    z-index: 1;
+    top:0;
+    left:0;
+    width:100%;
     height: 80px;
-    widht: 100%;
-    position: relative;
-    text-align: center ;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    background-color: black ;
 `;
 
 function Header (){
     
     return(
-        <StyledDiv>
-
-            <div>
-                <a href="/">
-                    <img alt="Logo Faculdade Impacta" src="/logoHeader2.png"></img>
-                </a>
-            </div>
-
-        </StyledDiv>
+            <StyledDiv>
+                <header>
+                        <a href="/">
+                            <img alt="Logo Faculdade Impacta" src="/logoHeader2.png"></img>
+                        </a>
+                </header>
+            </StyledDiv>
     )
 }
 

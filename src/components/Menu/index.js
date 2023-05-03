@@ -1,34 +1,33 @@
-
 import ItemMenu from "./ItemMenu";
-import './Menu.css'
 import { useState } from 'react';
 import styled from "styled-components";
+import { BoxTitle, BoxText, List, BoxSmall } from "../../pages/Home/HomeStyles";
 
 const StyledDiv= styled.div`
 
-    text-align: center;  
-    height:100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #002953;
+/* @media (max-width:600px){
+
+    #menu-vertical_all menu-expand{
+        width:40%;
+        display:flex;
+        flex-wrap: wrap;
+    }        
+
+}
     position:absolute;
-    margin-top: 80px;
-    float:left;
+    width:20%;
+    color: #002953;
     background-color: #EFEEEE;
-    margin-left: auto;
 
     h4 {
-    font-weight: bold;
-    font-size: 26px;
-    font-family: 'Calibri';
-    color: #002953;
-}
+        font-weight: bold;
+        font-size: 26px;
+        font-family: 'Calibri';
+        color: #002953;
+        padding-left:15px;
+    }
 
-ul{
-    list-style-type: none;
-    padding:0px;
-}
+    */
 `
 
 function Menu() {
@@ -54,42 +53,81 @@ function Menu() {
     // Renderiza o componente Menu
     return (
         <StyledDiv>
-        
-        <header className="App-header">
-        <h4>ACESSO RÁPIDO</h4>
-        </header>
-       
-            <div className="menu-vertical_all menu-expand"
-            id="menu-vertical_secretaria_online"
-            onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}>
-            <ItemMenu name="Secretaria Online" ></ItemMenu>
-            <div className="arrow-right"></div>
-            <ul
-            className="submenu-expand"
-            id="submenu_secretaria_online"
-            style={{ display: showSubMenu ? 'block' : 'none' }}>
-            <li className="menu-vertical_all">
-                <a href="../NotasFaltas/index.js" onClick={handleNotasFaltasClick}>
-                <i className="icon-plus"></i>Notas e Faltas
-                </a>
-            </li>
-            <li className="menu-vertical_all">
-                <a href="/aluno/horario-aula.php">
-                <i className="icon-plus"></i>Horários
-                </a>
-            </li>
-            <li className="menu-vertical_all">
-                <a href="/aluno/meus-documentos.php">
-                <i className="icon-plus"></i>Documentos
-                </a>
-            </li>
-            </ul>
-                </div>
-       
-   
-      </StyledDiv>
-    
+                <BoxSmall>
+                    <div className="menu-vertical_all menu-expand"
+                        id="menu-vertical_secretaria_online"
+                        onMouseOver={handleMouseOver}
+                        onMouseOut={handleMouseOut}>
+                        <header className="App-header">
+                            <BoxTitle>
+                                <h3>ACESSO RÁPIDO</h3>
+                            </BoxTitle>
+                        </header>
+                        <BoxText>
+                            <ItemMenu name="Carteirinha de Estudante" ></ItemMenu>
+                            <ItemMenu name="Secretaria Online" ></ItemMenu>
+                            <ItemMenu name="Financeiro Online" ></ItemMenu>
+                            <ItemMenu name="Biblioteca" ></ItemMenu>
+                            <ItemMenu name="PAI" ></ItemMenu>
+                            <ItemMenu name="CPA" ></ItemMenu>
+                            <ItemMenu name="Atividade Complementares" ></ItemMenu>
+                            <ItemMenu name="Ouvidoria" ></ItemMenu>
+                            <ItemMenu name="Requerimentos
+                            (Secretaria/Financeiro)" ></ItemMenu>
+                            <ItemMenu name="Contato dos Professores" ></ItemMenu>
+                            <ItemMenu name="Acesse Também" ></ItemMenu>
+                        <header className="App-header">
+                            <BoxTitle>
+                                <h3>SMARTCLASS</h3>
+                            </BoxTitle>
+                        </header>
+                        <ItemMenu name="Aulas de Graduação e Pós-Graduação" ></ItemMenu>
+                        <header className="App-header">
+                            <BoxTitle>
+                                <h3>AVA</h3>
+                            </BoxTitle>
+                        </header>
+                        <ItemMenu name="Orchestra4edu" ></ItemMenu>
+                        <header className="App-header">
+                            <BoxTitle>
+                                <h3>CURSOS LIVRES</h3>
+                            </BoxTitle>
+                        </header>
+                        <ItemMenu name="Acessar" ></ItemMenu>
+                        <ItemMenu name="Cupom" ></ItemMenu>
+                        <header className="App-header">
+                            <BoxTitle>
+                                <h3>PROVA FÁCIL</h3>
+                            </BoxTitle>
+                        </header>
+                        <ItemMenu name="Acessar" ></ItemMenu>
+                        <div className="arrow-right"></div>
+                        <List>
+                            {/* <ul
+                            className="submenu-expand"
+                            id="submenu_secretaria_online"
+                            style={{ display: showSubMenu ? 'block' : 'none' }}> */}
+                            <li className="menu-vertical_all">
+                                <a href="../NotasFaltas/index.js" onClick={handleNotasFaltasClick}>
+                                    <i className="icon-plus"></i>Notas e Faltas
+                                </a>
+                            </li>
+                            <li className="menu-vertical_all">
+                                <a href="/aluno/horario-aula.php">
+                                    <i className="icon-plus"></i>Horários
+                                </a>
+                            </li>
+                            <li className="menu-vertical_all">
+                                <a href="/aluno/meus-documentos.php">
+                                    <i className="icon-plus"></i>Documentos
+                                </a>
+                            </li>
+                           {/*  </ul> */}
+                        </List>
+                        </BoxText>
+                    </div>
+                </BoxSmall>
+        </StyledDiv>
   );
 }
 

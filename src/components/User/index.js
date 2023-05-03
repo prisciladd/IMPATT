@@ -1,22 +1,47 @@
 import React from "react";
 import styled from "styled-components";
+import { BoxText } from "../../pages/Home/HomeStyles";
+import px2vw from "../../utils/px2vw";
 
 const Styles= styled.div`
 
-    width: 100%;
-    height: 100%;
+/* @media (max-width:600px){
+        
+        .user{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .box{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center ;
+            width: 100%;
+        }
+
+    }
+
+    */
+    @media (max-width: 600px) {
+        display: flex;
+        justify-content: center;
+        width: ${px2vw(320, 320)};
+
+
+    }
+
     display: flex;
     justify-content: right;
-    position: relative;
-    float: right;
-
+    width: 100%;
+    height: 100%;
+    margin-top:80px;
+    
     .box{
-    border-radius: 5px ;
-    background-color: #e1e1e1;
-    display: flex;
-    width:100vh;
-    margin:5px;
-    justify-content: space-between;
+        border-radius: 5px ;
+        background-color: #e1e1e1;
+        display: flex;
+        width:100%;
+        margin:5px;
     }
 
     img{
@@ -34,49 +59,47 @@ const Styles= styled.div`
         margin-right:5px;
     }
     
-    button:last-child{
+    button:first-child{
         background-color: #C73E38 ;
         border-color:#C73E38;
         margin-right:5px;
     }
 
-    .ps{
-        font-size: 0;
-        
+    strong{
+        padding:5px;
     }
-
-    p{
-        font-size:12px;
-        margin:2px;
-        
-    }
-
-    .buttons{
-        position:relative;
-    }
-
-`;
+ `;
 
 function User(){
     return(
-        <Styles>
-        <div className="user">
-            <div className="box">
-                <img alt="" src="/user.png"></img>
-                 <div className="ra">
-                        <p>Olá, Priscila</p>
-                        <p>Ra: 1901843</p>
-                </div>
-                <p>Curso: Sistemas de Informação</p>
-                <div className="buttons">
-
-                    <button>Área do Aluno</button>
-                    <button>SAIR</button>
-                </div>
-                </div>
-        </div>
-        </Styles>
-
+                <Styles>
+                    <BoxText>
+                        <div className="user">
+                            <div className="box">
+                                <img alt="" src="/user.png" />
+                                <div class="span2">
+                                    <p>Olá,  
+                                        <strong>Priscila</strong>
+                                    </p>
+                                    <p>Ra: 
+                                        <strong>1901843</strong>
+                                    </p>
+                                </div>
+                                <div class="span2">
+                                    <p>Curso: 
+                                        <strong>
+                                        Sistemas de Informação
+                                        </strong>
+                                    </p>
+                                </div>
+                                <div class="span4">
+                                    <button>SAIR</button>
+                                    <button>Área do Aluno</button>
+                                </div>
+                            </div>
+                        </div>
+                    </BoxText>
+                </Styles>
     );
 
 }
