@@ -54,18 +54,36 @@ function Menu() {
     return (
         <StyledDiv>
                 <BoxSmall>
-                    <div className="menu-vertical_all menu-expand"
-                        id="menu-vertical_secretaria_online"
-                        onMouseOver={handleMouseOver}
-                        onMouseOut={handleMouseOut}>
-                        <header className="App-header">
+                    <div className="menu-vertical_all menu-expand" id="menu-vertical_secretaria_online" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                             <BoxTitle>
                                 <h3>ACESSO RÁPIDO</h3>
                             </BoxTitle>
-                        </header>
                         <BoxText>
                             <ItemMenu name="Carteirinha de Estudante" ></ItemMenu>
-                            <ItemMenu name="Secretaria Online" ></ItemMenu>
+                            <ItemMenu name="Secretaria Online" >
+
+                            <List>
+                                <ul
+                                className="submenu-expand"
+                                id="submenu_secretaria_online" style={{ display: showSubMenu ? 'block' : 'none' }}>
+                                    <li className="menu-vertical_all">
+                                        <a href="../NotasFaltas/index.js" onClick={handleNotasFaltasClick}>
+                                            <i className="icon-plus"></i>Notas e Faltas
+                                        </a>
+                                    </li>
+                                    <li className="menu-vertical_all">
+                                        <a href="/aluno/horario-aula.php">
+                                            <i className="icon-plus"></i>Horários
+                                        </a>
+                                    </li>
+                                    <li className="menu-vertical_all">
+                                        <a href="/aluno/meus-documentos.php">
+                                            <i className="icon-plus"></i>Documentos
+                                        </a>
+                                    </li>
+                                </ul>
+                        </List>
+                        </ItemMenu>
                             <ItemMenu name="Financeiro Online" ></ItemMenu>
                             <ItemMenu name="Biblioteca" ></ItemMenu>
                             <ItemMenu name="PAI" ></ItemMenu>
@@ -102,28 +120,6 @@ function Menu() {
                         </header>
                         <ItemMenu name="Acessar" ></ItemMenu>
                         <div className="arrow-right"></div>
-                        <List>
-                            {/* <ul
-                            className="submenu-expand"
-                            id="submenu_secretaria_online"
-                            style={{ display: showSubMenu ? 'block' : 'none' }}> */}
-                            <li className="menu-vertical_all">
-                                <a href="../NotasFaltas/index.js" onClick={handleNotasFaltasClick}>
-                                    <i className="icon-plus"></i>Notas e Faltas
-                                </a>
-                            </li>
-                            <li className="menu-vertical_all">
-                                <a href="/aluno/horario-aula.php">
-                                    <i className="icon-plus"></i>Horários
-                                </a>
-                            </li>
-                            <li className="menu-vertical_all">
-                                <a href="/aluno/meus-documentos.php">
-                                    <i className="icon-plus"></i>Documentos
-                                </a>
-                            </li>
-                           {/*  </ul> */}
-                        </List>
                         </BoxText>
                     </div>
                 </BoxSmall>
