@@ -7,25 +7,22 @@ import Menu from "./components/Menu";
 import User from "./components/User";
 import Home from "./components/Home";
 import Global from "./styles/global";
-import { Container} from "../src/pages/Home/HomeStyles";
+import { Container } from "../src/pages/Home/HomeStyles";
 
 function App(props) {
-
   return (
     <>
       <Global />
-        <User /> 
-        <Header /> 
+      <User />
+      <Header />
       <Container>
         <Menu />
-        <Home />      
-        {/* <div className="main">
+        <div className="main">
           <div className="content" id="content">
             {props.children}
           </div>
-        </div> */}
+        </div>
       </Container>
-      
     </>
   );
 }
