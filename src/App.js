@@ -3,10 +3,11 @@ import { withRouter } from "react-router-dom";
 import "../src/content.css";
 import "./App.css";
 import Header from "./components/Header";
-import Menu from "./components/Menu";
+import MenuDesktop from "./components/MenuDesktop";
 import User from "./components/User";
 import Home from "./components/Home";
 import Global from "./styles/global";
+import MenuMobile from "./components/MenuMobile";
 import { Container } from "../src/pages/Home/HomeStyles";
 
 //vamos fzr nossa aplicacao em em cima de um card<<<<<<
@@ -23,9 +24,16 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import SchoolIcon from "@material-ui/icons/School";
 import FaceIcon from "@material-ui/icons/Face";
 
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
 import "./App.css";
 
 function App(props) {
+  //capturar tamanho tela
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm")); // false == mobile /true desktop
+
   return (
     // <>
     //   <Global />
@@ -42,6 +50,7 @@ function App(props) {
     // </>
     <div className="App">
       <div className="App-body">
+        <span>{`theme.breakpoints.up('sm') matches: ${matches}`}</span>;
         <Card
           style={{
             flex: 1,
@@ -54,7 +63,7 @@ function App(props) {
           }}
         >
           <Header />
-          <Menu />
+          {matches ? <MenuDesktop /> : <MenuMobile />}
           <CardContent
             style={{ flex: 1, display: "flex", flexDirection: "column" }}
           >

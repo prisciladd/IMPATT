@@ -202,7 +202,7 @@ const MenuStyle = styled.div`
   margin-top: 10%;
 `;
 
-export default function TemporaryDrawer() {
+export default function MenuMobile() {
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -259,7 +259,7 @@ export default function TemporaryDrawer() {
   return (
     <MenuStyle>
       <div>
-        {["left", "right", "top", "bottom"].map((anchor) => (
+        {["Menu"].map((anchor) => (
           <React.Fragment key={anchor}>
             <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
             <Drawer
