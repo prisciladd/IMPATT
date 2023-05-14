@@ -1,12 +1,26 @@
 import * as React from "react";
+import Box from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import InboxIcon from "@mui/icons-material/MoveToInbox";
+import MailIcon from "@mui/icons-material/Mail";
+import styled from "styled-components";
+
+// import * as React from "react";
+// import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import PopupState, { bindTrigger, bindMenu } from "material-ui-popup-state";
 
 // import ItemMenu from "./ItemMenu";
 // import { useState } from "react";
-import styled from "styled-components";
+//import styled from "styled-components";
 // import { BoxTitle, BoxText, List, BoxSmall } from "../../pages/Home/HomeStyles";
 
 // //estilo em texto
@@ -145,37 +159,119 @@ const StyledDiv = styled.div`
 
 // export default Menu;
 
-export default function MenuPopupState() {
+// export default function MenuPopupState() {
+//   return (
+//     <Paper>
+//       <PopupState variant="popover" popupId="demo-popup-menu">
+//         {(popupState) => (
+//           <React.Fragment>
+//             <Button variant="contained" {...bindTrigger(popupState)}>
+//               Carterinha
+//             </Button>
+//             <Menu {...bindMenu(popupState)}>
+//               <MenuItem onClick={popupState.close}>Profile</MenuItem>
+//               <MenuItem onClick={popupState.close}>My account</MenuItem>
+//               <MenuItem onClick={popupState.close}>Logout</MenuItem>
+//             </Menu>
+//           </React.Fragment>
+//         )}
+//       </PopupState>
+//       <PopupState variant="popover" popupId="demo-popup-menu">
+//         {(popupState) => (
+//           <React.Fragment>
+//             <Button variant="contained" {...bindTrigger(popupState)}>
+//               Secretaria
+//             </Button>
+//             <Menu {...bindMenu(popupState)}>
+//               <MenuItem onClick={popupState.close}>oi</MenuItem>
+//               <MenuItem onClick={popupState.close}>a account</MenuItem>
+//               <MenuItem onClick={popupState.close}>s</MenuItem>
+//             </Menu>
+//           </React.Fragment>
+//         )}
+//       </PopupState>
+//     </Paper>
+//   );
+// }
+
+const MenuStyle = styled.div`
+  @media (max-width: 600px) {
+    margin-top: 30%;
+  }
+
+  margin-top: 10%;
+`;
+
+export default function TemporaryDrawer() {
+  const [state, setState] = React.useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
+  const list = (anchor) => (
+    <Box
+      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <List>
+        {["All mail", "Trash", "Spam"].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
+
   return (
-    <Paper>
-      <PopupState variant="popover" popupId="demo-popup-menu">
-        {(popupState) => (
-          <React.Fragment>
-            <Button variant="contained" {...bindTrigger(popupState)}>
-              Carterinha
-            </Button>
-            <Menu {...bindMenu(popupState)}>
-              <MenuItem onClick={popupState.close}>Profile</MenuItem>
-              <MenuItem onClick={popupState.close}>My account</MenuItem>
-              <MenuItem onClick={popupState.close}>Logout</MenuItem>
-            </Menu>
+    <MenuStyle>
+      <div>
+        {["left", "right", "top", "bottom"].map((anchor) => (
+          <React.Fragment key={anchor}>
+            <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+            <Drawer
+              anchor={anchor}
+              open={state[anchor]}
+              onClose={toggleDrawer(anchor, false)}
+            >
+              {list(anchor)}
+            </Drawer>
           </React.Fragment>
-        )}
-      </PopupState>
-      <PopupState variant="popover" popupId="demo-popup-menu">
-        {(popupState) => (
-          <React.Fragment>
-            <Button variant="contained" {...bindTrigger(popupState)}>
-              Secretaria
-            </Button>
-            <Menu {...bindMenu(popupState)}>
-              <MenuItem onClick={popupState.close}>oi</MenuItem>
-              <MenuItem onClick={popupState.close}>a account</MenuItem>
-              <MenuItem onClick={popupState.close}>s</MenuItem>
-            </Menu>
-          </React.Fragment>
-        )}
-      </PopupState>
-    </Paper>
+        ))}
+      </div>
+    </MenuStyle>
   );
 }
