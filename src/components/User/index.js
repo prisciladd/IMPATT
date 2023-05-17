@@ -42,11 +42,11 @@ const DadosUsuario = styled.div`
 const CardUsuario = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
 
   .fotoUsuario {
     display: flex;
-    justify-content: end;
+    justify-content: start;
   }
 
   .dadosUsuario {
@@ -169,47 +169,57 @@ function User() {
       </Styles> */}
       <Card
         sx={{
-          maxWidth: "300px",
+          maxWidth: 10000,
           minWidth: 10,
           marginTop: 10,
         }}
       >
         <CardContent>
           <Content>
-            <LogoUsuario src="/user.png" />
-            <DadosUsuario>
-              <Typography
-                fontFamily={("EurostileLTStd", "Trebuchet MS")}
-                variant="p"
-              >
-                Olá, Priscila
-              </Typography>
-              <Typography
-                fontFamily={("EurostileLTStd", "Trebuchet MS")}
-                variant="p"
-              >
-                Ra: 1901843
-              </Typography>
-            </DadosUsuario>
-
-            <Typography
-              fontFamily={("EurostileLTStd", "Trebuchet MS")}
-              variant="p"
-            >
-              Curso:
-              <strong>Sistemas de Informação</strong>
-            </Typography>
+            <CardUsuario>
+              <div className="fotoUsuario">
+                <LogoUsuario src="/user.png" />
+              </div>
+              <div className="dadosUsuario">
+                <Typography
+                  fontFamily={("EurostileLTStd", "Trebuchet MS")}
+                  variant="p"
+                >
+                  Olá, Priscila
+                </Typography>
+                <Typography
+                  fontFamily={("EurostileLTStd", "Trebuchet MS")}
+                  variant="p"
+                >
+                  Ra: 1901843
+                </Typography>
+              </div>
+              <div className="botoes">
+                <Typography
+                  fontFamily={("EurostileLTStd", "Trebuchet MS")}
+                  variant="p"
+                >
+                  Curso:
+                  <strong>Sistemas de Informação</strong>
+                </Typography>
+                <Button variant="contained" color="inherit" size="small">
+                  Área do Aluno
+                </Button>
+                <Button variant="contained" color="error" size="small">
+                  Sair
+                </Button>
+              </div>
+            </CardUsuario>
           </Content>
         </CardContent>
-
-        <CardActions>
+        {/* <CardActions style={{ justifyContent: "end" }}>
           <Button variant="contained" color="inherit" size="small">
             Área do Aluno
           </Button>
           <Button variant="contained" color="error" size="small">
             Sair
           </Button>
-        </CardActions>
+        </CardActions> */}
       </Card>
     </>
   );
