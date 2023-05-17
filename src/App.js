@@ -1,4 +1,5 @@
 import * as React from "react";
+//componentes MUI
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -8,17 +9,20 @@ import Toolbar from "@mui/material/Toolbar";
 import List from "@mui/material/List";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
+import styledComponents from "styled-components";
+//icones
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
-import styledComponents from "styled-components";
+import ImportContactsIcon from "@mui/icons-material/ImportContacts";
+//componentes interno
 import { withRouter } from "react-router-dom";
 import User from "./components/User";
 
@@ -88,6 +92,35 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 }));
 
 export function App(props) {
+  //Itens menu
+  const ItensMenu = [
+    { nome: "Notas e Faltas", path: "notasFaltas", icone: ImportContactsIcon },
+    { nome: "Notas e Faltas", path: "notasFaltas", icone: InboxIcon },
+    { nome: "Notas e Faltas", path: "notasFaltas", icone: InboxIcon },
+    { nome: "Notas e Faltas", path: "notasFaltas", icone: InboxIcon },
+  ];
+  const ItensMenu2 = [
+    {
+      menuPai: "Carteirinha",
+      subMenus: [
+        { nome: "Ir para carteirinha", path: "notasFaltas", icone: InboxIcon },
+      ],
+    },
+    {
+      menuPai: "Secretária Online",
+      subMenus: [
+        { nome: "Notas e Faltas", path: "notasFaltas", icone: InboxIcon },
+        { nome: "Horários", path: "notasFaltas", icone: InboxIcon },
+      ],
+    },
+    {
+      menuPai: "Financeiro Online",
+      subMenus: [
+        { nome: "Financeiro", path: "notasFaltas", icone: InboxIcon },
+        { nome: "Horários", path: "notasFaltas", icone: InboxIcon },
+      ],
+    },
+  ];
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -142,32 +175,28 @@ export function App(props) {
             )}
           </IconButton>
         </DrawerHeader>
-        <Divider />
+
         <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
+          {ItensMenu2.map((itemMenu) => (
+            <>
+              <Typography>{itemMenu.menuPai}</Typography>
+              <Divider />
+              {itemMenu.subMenus.map((subMenu) => (
+                <a href={subMenu.path} key={subMenu.nome}>
+                  <ListItem key={subMenu.nome} disablePadding>
+                    <ListItemButton>
+                      <ListItemIcon>
+                        {<subMenu.icone></subMenu.icone>}
+                      </ListItemIcon>
+                      <ListItemText primary={subMenu.nome} />
+                    </ListItemButton>
+                  </ListItem>
+                </a>
+              ))}
+            </>
           ))}
         </List>
         <Divider />
-        <List>
-          {["All mail", "Trash", "Spam"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
