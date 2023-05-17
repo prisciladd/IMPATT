@@ -30,6 +30,34 @@ const LogoUsuario = styled.img`
     height: 30px;
   }
 `;
+const DadosUsuario = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 600px) {
+    /* width: 30px;
+    height: 30px; */
+  }
+`;
+
+const CardUsuario = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .fotoUsuario {
+    display: flex;
+    justify-content: end;
+  }
+
+  .dadosUsuario {
+    display: flex;
+    flex-direction: column;
+  }
+  .botoes {
+  }
+`;
+
+//img / dados usuario / dados sistema
 
 const Styles = styled.div`
   /* @media (max-width:600px){
@@ -139,23 +167,31 @@ function User() {
           </div>
         </BoxText>
       </Styles> */}
-      <Card sx={{ minWidth: 10, marginTop: 10 }}>
+      <Card
+        sx={{
+          maxWidth: "300px",
+          minWidth: 10,
+          marginTop: 10,
+        }}
+      >
         <CardContent>
           <Content>
-            {/* <img alt="" src="/user.png" /> */}
             <LogoUsuario src="/user.png" />
-            <Typography
-              fontFamily={("EurostileLTStd", "Trebuchet MS")}
-              variant="p"
-            >
-              Olá, Priscila
-            </Typography>
-            <Typography
-              fontFamily={("EurostileLTStd", "Trebuchet MS")}
-              variant="p"
-            >
-              Ra: 1901843
-            </Typography>
+            <DadosUsuario>
+              <Typography
+                fontFamily={("EurostileLTStd", "Trebuchet MS")}
+                variant="p"
+              >
+                Olá, Priscila
+              </Typography>
+              <Typography
+                fontFamily={("EurostileLTStd", "Trebuchet MS")}
+                variant="p"
+              >
+                Ra: 1901843
+              </Typography>
+            </DadosUsuario>
+
             <Typography
               fontFamily={("EurostileLTStd", "Trebuchet MS")}
               variant="p"

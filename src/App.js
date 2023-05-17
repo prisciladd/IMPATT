@@ -47,6 +47,16 @@ const ToolbarStyle = styledComponents.div`
     height: 80px;
   }
 `;
+//Ajusta o card usuario para esquerda desktop ou no centro mobile
+const MenuUser = styledComponents.div`
+  display:flex;
+  flex-direction:row;
+  justify-content:end;
+  
+  @media (max-width: 600px) {
+     justify-content:center;
+  }
+`;
 
 //responsavel pelo conteudo do meio da pagina
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
@@ -238,7 +248,9 @@ export function App(props) {
       </Drawer>
       {/* <DrawerHeader /> */}
       <Main open={open}>
-        <User />
+        <MenuUser>
+          <User />
+        </MenuUser>
         {props.children}
       </Main>
     </Box>
