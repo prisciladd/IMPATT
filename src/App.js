@@ -1,88 +1,180 @@
-import React from "react";
+import * as React from "react";
+import { styled, useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
+import CssBaseline from "@mui/material/CssBaseline";
+import MuiAppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import List from "@mui/material/List";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import InboxIcon from "@mui/icons-material/MoveToInbox";
+import MailIcon from "@mui/icons-material/Mail";
+import styledComponents from "styled-components";
 import { withRouter } from "react-router-dom";
-import "../src/content.css";
-import "./App.css";
-import Header from "./components/Header";
-import MenuDesktop from "./components/MenuDesktop";
 import User from "./components/User";
-import Home from "./components/Home";
-import Global from "./styles/global";
-import MenuMobile from "./components/MenuMobile";
-import { Container } from "../src/pages/Home/HomeStyles";
 
-//vamos fzr nossa aplicacao em em cima de um card<<<<<<
-import Card from "@material-ui/core/Card";
-//o proprio card MUI tem actions
-import CardActions from "@material-ui/core/CardActions";
-//area de conteudo do nosso card
-import CardContent from "@material-ui/core/CardContent";
-//navegacao
-import BottomNavigation from "@material-ui/core/BottomNavigation";
-import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
-//icones
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import SchoolIcon from "@material-ui/icons/School";
-import FaceIcon from "@material-ui/icons/Face";
+const drawerWidth = 240;
 
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
+// Responsavel pela barra superior
+const ToolbarStyle = styledComponents.div`
+  background-image: url("./logoHeader2.png");
+  background-color: #505050;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 80px;
 
-import "./App.css";
+  @media (max-width: 600px) {
+    background-color: #002953;
+    width: 100%;
+    height: 80px;
+  }
+`;
 
-function App(props) {
-  //capturar tamanho tela
+//responsavel pelo conteudo do meio da pagina
+const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
+  ({ theme, open }) => ({
+    overflowX: "hidden", // evita scroll lateral quando aberto em celular
+    flexGrow: 1,
+    padding: theme.spacing(3),
+    transition: theme.transitions.create("margin", {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+    marginLeft: `-${drawerWidth}px`,
+    ...(open && {
+      transition: theme.transitions.create("margin", {
+        easing: theme.transitions.easing.easeOut,
+        duration: theme.transitions.duration.enteringScreen,
+      }),
+      marginLeft: 0,
+    }),
+  })
+);
+
+const AppBar = styled(MuiAppBar, {
+  shouldForwardProp: (prop) => prop !== "open",
+})(({ theme, open }) => ({
+  transition: theme.transitions.create(["margin", "width"], {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.leavingScreen,
+  }),
+  ...(open && {
+    width: `calc(100% - ${drawerWidth}px)`,
+    marginLeft: `${drawerWidth}px`,
+    transition: theme.transitions.create(["margin", "width"], {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  }),
+}));
+
+const DrawerHeader = styled("div")(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  padding: theme.spacing(0, 1),
+  // necessary for content to be below app bar
+  ...theme.mixins.toolbar,
+  justifyContent: "flex-end",
+}));
+
+export function App(props) {
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up("sm")); // false == mobile /true desktop
+  const [open, setOpen] = React.useState(false);
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
 
   return (
-    // <>
-    //   <Global />
-    //   <User />
-    //   <Header />
-    //   <Container>
-    //     <Menu />
-    //     <div className="main">
-    //       <div className="content" id="content">
-    //         {props.children}
-    //       </div>
-    //     </div>
-    //   </Container>
-    // </>
-    <div className="App">
-      <div className="App-body">
-        <span>{`theme.breakpoints.up('sm') matches: ${matches}`}</span>;
-        <Card
-          style={{
-            flex: 1,
-            marginTop: "0.4%", //  efeito bordas
-            display: "flex",
-            marginBottom: "0.4%", //  efeito bordas
-            flexDirection: "column",
-            width: "100%",
-            maxWidth: 1700, //nao passa 600pixel
-          }}
-        >
-          <Header />
-          {matches ? <MenuDesktop /> : <MenuMobile />}
-          <CardContent
-            style={{ flex: 1, display: "flex", flexDirection: "column" }}
-          >
-            {props.children}
-          </CardContent>
-
-          {/* <CardActions style={{ display: "flex" }}>
-            <BottomNavigation style={{ flex: 1 }} showLabels>
-              <BottomNavigationAction label="Match" icon={<FavoriteIcon />} />
-              <BottomNavigationAction
-                label="Estudantes"
-                icon={<SchoolIcon />}
-              />
-              <BottomNavigationAction label="Perfil" icon={<FaceIcon />} />
-            </BottomNavigation>
-          </CardActions> */}
-        </Card>
-      </div>
-    </div>
+    <Box sx={{ display: "flex" }}>
+      <CssBaseline />
+      <AppBar position="fixed" open={open}>
+        <ToolbarStyle>
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              onClick={handleDrawerOpen}
+              edge="start"
+              sx={{ mr: 2, ...(open && { display: "none" }) }}
+            >
+              <MenuIcon />
+            </IconButton>
+            {/* <Typography variant="h6" noWrap component="div">
+            Persistent drawer
+          </Typography> */}
+          </Toolbar>
+        </ToolbarStyle>
+      </AppBar>
+      <Drawer
+        sx={{
+          width: drawerWidth,
+          flexShrink: 0,
+          "& .MuiDrawer-paper": {
+            width: drawerWidth,
+            boxSizing: "border-box",
+          },
+        }}
+        variant="persistent"
+        anchor="left"
+        open={open}
+      >
+        <DrawerHeader>
+          <IconButton onClick={handleDrawerClose}>
+            {theme.direction === "ltr" ? (
+              <ChevronLeftIcon />
+            ) : (
+              <ChevronRightIcon />
+            )}
+          </IconButton>
+        </DrawerHeader>
+        <Divider />
+        <List>
+          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+            <ListItem key={text} disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+        <Divider />
+        <List>
+          {["All mail", "Trash", "Spam"].map((text, index) => (
+            <ListItem key={text} disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </Drawer>
+      <Main open={open}>
+        <DrawerHeader />
+        <User />
+        {props.children}
+      </Main>
+    </Box>
   );
 }
 

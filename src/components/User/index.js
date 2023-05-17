@@ -3,9 +3,15 @@ import styled from "styled-components";
 import { BoxText } from "../../pages/Home/HomeStyles";
 import px2vw from "../../utils/px2vw";
 
-const Styles= styled.div`
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 
-/* @media (max-width:600px){
+const Styles = styled.div`
+  /* @media (max-width:600px){
         
         .user{
             display: flex;
@@ -22,86 +28,129 @@ const Styles= styled.div`
     }
 
     */
-    @media (max-width: 600px) {
-        display: flex;
-        justify-content: center;
-        width: ${px2vw(320, 320)};
-
-
-    }
-
+  @media (max-width: 600px) {
     display: flex;
-    justify-content: right;
+    justify-content: start;
+    align-items: start;
+    //width: ${px2vw(320, 320)};
+    width: 350px;
+  }
+
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  height: 100%;
+  margin-top: 80px;
+
+  .box {
+    border-radius: 5px;
+    background-color: #e1e1e1;
+    display: flex;
     width: 100%;
-    height: 100%;
-    margin-top:80px;
-    
-    .box{
-        border-radius: 5px ;
-        background-color: #e1e1e1;
-        display: flex;
-        width:100%;
-        margin:5px;
-    }
+    margin: 5px;
+  }
 
-    img{
-        margin: 5px;
-        height: 40px;
-    }
-    
-    button {
-        background-color: #454545 ;
-        border-color: #454545 ;
-        color: white;
-        border-radius:5px;
-        height: 30px;   
-        margin-top:10px;
-        margin-right:5px;
-    }
-    
-    button:first-child{
-        background-color: #C73E38 ;
-        border-color:#C73E38;
-        margin-right:5px;
-    }
+  img {
+    margin: 5px;
+    height: 40px;
+  }
 
-    strong{
-        padding:5px;
-    }
- `;
+  button {
+    background-color: #454545;
+    border-color: #454545;
+    color: white;
+    border-radius: 5px;
+    height: 30px;
+    margin-top: 10px;
+    margin-right: 5px;
+  }
 
-function User(){
-    return(
-                <Styles>
-                    <BoxText>
-                        <div className="user">
-                            <div className="box">
-                                <img alt="" src="/user.png" />
-                                <div class="span2">
-                                    <p>Olá,  
-                                        <strong>Priscila</strong>
-                                    </p>
-                                    <p>Ra: 
-                                        <strong>1901843</strong>
-                                    </p>
-                                </div>
-                                <div class="span2">
-                                    <p>Curso: 
-                                        <strong>
-                                        Sistemas de Informação
-                                        </strong>
-                                    </p>
-                                </div>
-                                <div class="span4">
-                                    <button>SAIR</button>
-                                    <button>Área do Aluno</button>
-                                </div>
-                            </div>
-                        </div>
-                    </BoxText>
-                </Styles>
-    );
+  button:first-child {
+    background-color: #c73e38;
+    border-color: #c73e38;
+    margin-right: 5px;
+  }
 
+  strong {
+    padding: 5px;
+  }
+`;
+
+const bull = (
+  <Box
+    component="span"
+    sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
+  >
+    •
+  </Box>
+);
+
+function User() {
+  return (
+    <>
+      {/* <Styles>
+        <BoxText>
+          <div className="user">
+            <div className="box">
+              <img alt="" src="/user.png" />
+              <div class="span2">
+                <p>
+                  Olá,
+                  <strong>Priscila</strong>
+                </p>
+                <p>
+                  Ra:
+                  <strong>1901843</strong>
+                </p>
+              </div>
+              <div class="span2">
+                <p>
+                  Curso:
+                  <strong>Sistemas de Informação</strong>
+                </p>
+              </div>
+              <div class="span4">
+                <button>SAIR</button>
+                <button>Área do Aluno</button>
+              </div>
+            </div>
+          </div>
+        </BoxText>
+      </Styles> */}
+      <Card sx={{ minWidth: 10 }}>
+        <CardContent>
+          <div className="user">
+            <div className="box">
+              <img alt="" src="/user.png" />
+              <div class="span2">
+                <p>
+                  Olá,
+                  <strong>Priscila</strong>
+                </p>
+                <p>
+                  Ra:
+                  <strong>1901843</strong>
+                </p>
+              </div>
+              <div class="span2">
+                <p>
+                  Curso:
+                  <strong>Sistemas de Informação</strong>
+                </p>
+              </div>
+              <div class="span4">
+                <button>SAIR</button>
+                <button>Área do Aluno</button>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+        <CardActions>
+          <Button size="small">Learn More</Button>
+        </CardActions>
+      </Card>
+    </>
+  );
 }
 
 export default User;
