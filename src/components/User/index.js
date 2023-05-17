@@ -9,6 +9,27 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import Avatar from "@mui/material/Avatar";
+import { deepOrange, deepGray } from "@mui/material/colors";
+
+const Content = styled.div`
+  //margin-top: 80px;
+
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    //margin-top: 80px;
+  }
+`;
+
+const LogoUsuario = styled.img`
+  width: 40px;
+  height: 40px;
+  @media (max-width: 600px) {
+    width: 30px;
+    height: 30px;
+  }
+`;
 
 const Styles = styled.div`
   /* @media (max-width:600px){
@@ -28,12 +49,13 @@ const Styles = styled.div`
     }
 
     */
-  @media (max-width: 600px) {
+  @media (max-width: 750) {
     display: flex;
-    justify-content: start;
-    align-items: start;
+    justify-content: end;
+    align-items: end;
     //width: ${px2vw(320, 320)};
     width: 350px;
+    padding: 100px;
   }
 
   display: flex;
@@ -117,36 +139,40 @@ function User() {
           </div>
         </BoxText>
       </Styles> */}
-      <Card sx={{ minWidth: 10 }}>
+      <Card sx={{ minWidth: 10, marginTop: 10 }}>
         <CardContent>
-          <div className="user">
-            <div className="box">
-              <img alt="" src="/user.png" />
-              <div class="span2">
-                <p>
-                  Olá,
-                  <strong>Priscila</strong>
-                </p>
-                <p>
-                  Ra:
-                  <strong>1901843</strong>
-                </p>
-              </div>
-              <div class="span2">
-                <p>
-                  Curso:
-                  <strong>Sistemas de Informação</strong>
-                </p>
-              </div>
-              <div class="span4">
-                <button>SAIR</button>
-                <button>Área do Aluno</button>
-              </div>
-            </div>
-          </div>
+          <Content>
+            {/* <img alt="" src="/user.png" /> */}
+            <LogoUsuario src="/user.png" />
+            <Typography
+              fontFamily={("EurostileLTStd", "Trebuchet MS")}
+              variant="p"
+            >
+              Olá, Priscila
+            </Typography>
+            <Typography
+              fontFamily={("EurostileLTStd", "Trebuchet MS")}
+              variant="p"
+            >
+              Ra: 1901843
+            </Typography>
+            <Typography
+              fontFamily={("EurostileLTStd", "Trebuchet MS")}
+              variant="p"
+            >
+              Curso:
+              <strong>Sistemas de Informação</strong>
+            </Typography>
+          </Content>
         </CardContent>
+
         <CardActions>
-          <Button size="small">Learn More</Button>
+          <Button variant="contained" color="inherit" size="small">
+            Área do Aluno
+          </Button>
+          <Button variant="contained" color="error" size="small">
+            Sair
+          </Button>
         </CardActions>
       </Card>
     </>

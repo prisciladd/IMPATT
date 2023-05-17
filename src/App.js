@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 //componentes MUI
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
@@ -24,6 +25,7 @@ import ListAltIcon from "@mui/icons-material/ListAlt";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import BadgeIcon from "@mui/icons-material/Badge";
 import PostAddIcon from "@mui/icons-material/PostAdd";
+import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 //componentes interno
 import { withRouter } from "react-router-dom";
 import User from "./components/User";
@@ -129,6 +131,16 @@ export function App(props) {
         },
       ],
     },
+    {
+      menuPai: "Acesse também",
+      subMenus: [
+        {
+          nome: "Vagas para Estágio",
+          path: "vagasEstagio",
+          icone: WorkOutlineIcon,
+        },
+      ],
+    },
   ];
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -198,32 +210,34 @@ export function App(props) {
               </Typography>
               <Divider />
               {itemMenu.subMenus.map((subMenu) => (
-                <a
-                  href={subMenu.path}
-                  key={subMenu.nome}
-                  style={{ textDecoration: "none", color: "#000" }}
-                >
-                  <ListItem
+                <Link to={subMenu.path}>
+                  <a
+                    href={subMenu.path}
                     key={subMenu.nome}
-                    disablePadding
-                    style={{ margin: 5 }}
+                    style={{ textDecoration: "none", color: "#000" }}
                   >
-                    <ListItemButton>
-                      <ListItemIcon>
-                        {<subMenu.icone></subMenu.icone>}
-                      </ListItemIcon>
-                      <ListItemText primary={subMenu.nome} />
-                    </ListItemButton>
-                  </ListItem>
-                </a>
+                    <ListItem
+                      key={subMenu.nome}
+                      disablePadding
+                      style={{ margin: 5 }}
+                    >
+                      <ListItemButton>
+                        <ListItemIcon>
+                          {<subMenu.icone></subMenu.icone>}
+                        </ListItemIcon>
+                        <ListItemText primary={subMenu.nome} />
+                      </ListItemButton>
+                    </ListItem>
+                  </a>
+                </Link>
               ))}
             </>
           ))}
         </List>
         <Divider />
       </Drawer>
+      {/* <DrawerHeader /> */}
       <Main open={open}>
-        <DrawerHeader />
         <User />
         {props.children}
       </Main>
