@@ -19,9 +19,11 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 import ImportContactsIcon from "@mui/icons-material/ImportContacts";
+import ListAltIcon from "@mui/icons-material/ListAlt";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import BadgeIcon from "@mui/icons-material/Badge";
+import PostAddIcon from "@mui/icons-material/PostAdd";
 //componentes interno
 import { withRouter } from "react-router-dom";
 import User from "./components/User";
@@ -92,32 +94,39 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 }));
 
 export function App(props) {
-  //Itens menu
+  //Itens menu lateral
   const ItensMenu = [
-    { nome: "Notas e Faltas", path: "notasFaltas", icone: ImportContactsIcon },
-    { nome: "Notas e Faltas", path: "notasFaltas", icone: InboxIcon },
-    { nome: "Notas e Faltas", path: "notasFaltas", icone: InboxIcon },
-    { nome: "Notas e Faltas", path: "notasFaltas", icone: InboxIcon },
-  ];
-  const ItensMenu2 = [
     {
       menuPai: "Carteirinha",
       subMenus: [
-        { nome: "Ir para carteirinha", path: "notasFaltas", icone: InboxIcon },
+        { nome: "Ir para carteirinha", path: "notasFaltas", icone: BadgeIcon },
       ],
     },
     {
       menuPai: "Secretária Online",
       subMenus: [
-        { nome: "Notas e Faltas", path: "notasFaltas", icone: InboxIcon },
-        { nome: "Horários", path: "notasFaltas", icone: InboxIcon },
+        {
+          nome: "Notas e Faltas",
+          path: "notasFaltas",
+          icone: ImportContactsIcon,
+        },
+        { nome: "Horários", path: "notasFaltas", icone: ListAltIcon },
       ],
     },
     {
       menuPai: "Financeiro Online",
       subMenus: [
-        { nome: "Financeiro", path: "notasFaltas", icone: InboxIcon },
-        { nome: "Horários", path: "notasFaltas", icone: InboxIcon },
+        { nome: "Financeiro", path: "notasFaltas", icone: AttachMoneyIcon },
+      ],
+    },
+    {
+      menuPai: "Requerimentos",
+      subMenus: [
+        {
+          nome: "Secretária/Financeiro",
+          path: "notasFaltas",
+          icone: PostAddIcon,
+        },
       ],
     },
   ];
@@ -177,13 +186,28 @@ export function App(props) {
         </DrawerHeader>
 
         <List>
-          {ItensMenu2.map((itemMenu) => (
+          {ItensMenu.map((itemMenu) => (
             <>
-              <Typography>{itemMenu.menuPai}</Typography>
+              <Typography
+                sx={{
+                  marginLeft: 0.5,
+                  fontSize: 18,
+                }}
+              >
+                {itemMenu.menuPai}
+              </Typography>
               <Divider />
               {itemMenu.subMenus.map((subMenu) => (
-                <a href={subMenu.path} key={subMenu.nome}>
-                  <ListItem key={subMenu.nome} disablePadding>
+                <a
+                  href={subMenu.path}
+                  key={subMenu.nome}
+                  style={{ textDecoration: "none", color: "#000" }}
+                >
+                  <ListItem
+                    key={subMenu.nome}
+                    disablePadding
+                    style={{ margin: 5 }}
+                  >
                     <ListItemButton>
                       <ListItemIcon>
                         {<subMenu.icone></subMenu.icone>}
