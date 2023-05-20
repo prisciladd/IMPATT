@@ -11,10 +11,10 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
 import { deepOrange, deepGray } from "@mui/material/colors";
+import { width } from "@mui/system";
 
 const Content = styled.div`
   //margin-top: 80px;
-
   @media (max-width: 600px) {
     display: flex;
     flex-direction: column;
@@ -23,19 +23,11 @@ const Content = styled.div`
 `;
 
 const LogoUsuario = styled.img`
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   @media (max-width: 600px) {
     width: 30px;
     height: 30px;
-  }
-`;
-const DadosUsuario = styled.div`
-  display: flex;
-  flex-direction: column;
-  @media (max-width: 600px) {
-    /* width: 30px;
-    height: 30px; */
   }
 `;
 
@@ -46,130 +38,120 @@ const CardUsuario = styled.div`
 
   .fotoUsuario {
     display: flex;
-    justify-content: start;
+    justify-content: end;
+    align-items: end;
+    @media (max-width: 600px) {
+      justify-content: start;
+      align-items: start;
+    }
   }
-
   .dadosUsuario {
     display: flex;
     flex-direction: column;
+
+    p {
+      font-size: 12;
+    }
+  }
+  .nomeCurso {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    font-size: 10;
   }
   .botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
-//img / dados usuario / dados sistema
+// const Styles = styled.div`
+//   display: flex;
+//   justify-content: end;
+//   width: 100%;
+//   height: 100%;
+//   margin-top: 60px;
+//   /* @media (max-width: 600px) {
+//     .user {
+//       display: flex;
+//       justify-content: center;
+//       width: 100%;
+//     }
+//     .box {
+//       display: flex;
+//       justify-content: space-evenly;
+//       align-items: center;
+//       width: 100%;
+//     }
+//   } */
 
-const Styles = styled.div`
-  /* @media (max-width:600px){
-        
-        .user{
-            display: flex;
-            justify-content: center;
-            width: 100%;
-        }
-        .box{
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center ;
-            width: 100%;
-        }
+//   @media (max-width: 750) {
+//     display: flex;
+//     justify-content: end;
+//     align-items: end;
+//     //width: ${px2vw(320, 320)};
+//     width: 350px;
+//     padding: 100px;
+//   }
 
-    }
+//   .box {
+//     border-radius: 5px;
+//     background-color: #e1e1e1;
+//     display: flex;
+//     width: 100%;
+//     margin: 5px;
+//   }
 
-    */
-  @media (max-width: 750) {
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    //width: ${px2vw(320, 320)};
-    width: 350px;
-    padding: 100px;
-  }
+//   img {
+//     margin: 5px;
+//     height: 40px;
+//   }
 
-  display: flex;
-  justify-content: right;
-  width: 100%;
-  height: 100%;
-  margin-top: 80px;
+//   button {
+//     background-color: #454545;
+//     border-color: #454545;
+//     color: white;
+//     border-radius: 5px;
+//     height: 30px;
+//     margin-top: 10px;
+//     margin-right: 5px;
+//   }
 
-  .box {
-    border-radius: 5px;
-    background-color: #e1e1e1;
-    display: flex;
-    width: 100%;
-    margin: 5px;
-  }
+//   button:first-child {
+//     background-color: #c73e38;
+//     border-color: #c73e38;
+//     margin-right: 5px;
+//   }
 
-  img {
-    margin: 5px;
-    height: 40px;
-  }
+//   strong {
+//     padding: 5px;
+//   }
 
-  button {
-    background-color: #454545;
-    border-color: #454545;
-    color: white;
-    border-radius: 5px;
-    height: 30px;
-    margin-top: 10px;
-    margin-right: 5px;
-  }
+//   .dadosUsuario {
+//   }
+//   .dadosCurso {
+//   }
+//   .botoes {
+//   }
+// `;
 
-  button:first-child {
-    background-color: #c73e38;
-    border-color: #c73e38;
-    margin-right: 5px;
-  }
-
-  strong {
-    padding: 5px;
-  }
-`;
-
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-  >
-    •
-  </Box>
-);
+// const bull = (
+//   <Box
+//     component="span"
+//     sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
+//   >
+//     •
+//   </Box>
+// );
 
 function User() {
   return (
     <>
-      {/* <Styles>
-        <BoxText>
-          <div className="user">
-            <div className="box">
-              <img alt="" src="/user.png" />
-              <div class="span2">
-                <p>
-                  Olá,
-                  <strong>Priscila</strong>
-                </p>
-                <p>
-                  Ra:
-                  <strong>1901843</strong>
-                </p>
-              </div>
-              <div class="span2">
-                <p>
-                  Curso:
-                  <strong>Sistemas de Informação</strong>
-                </p>
-              </div>
-              <div class="span4">
-                <button>SAIR</button>
-                <button>Área do Aluno</button>
-              </div>
-            </div>
-          </div>
-        </BoxText>
-      </Styles> */}
       <Card
         sx={{
-          maxWidth: 10000,
+          width: 650,
+          height: 68,
           minWidth: 10,
           marginTop: 10,
         }}
@@ -182,26 +164,28 @@ function User() {
               </div>
               <div className="dadosUsuario">
                 <Typography
+                  fontSize={12}
                   fontFamily={("EurostileLTStd", "Trebuchet MS")}
-                  variant="p"
                 >
                   Olá, Priscila
                 </Typography>
                 <Typography
+                  fontSize={12}
                   fontFamily={("EurostileLTStd", "Trebuchet MS")}
-                  variant="p"
                 >
                   Ra: 1901843
                 </Typography>
               </div>
-              <div className="botoes">
+              <div className="nomeCurso">
                 <Typography
+                  fontSize={12}
                   fontFamily={("EurostileLTStd", "Trebuchet MS")}
-                  variant="p"
                 >
                   Curso:
                   <strong>Sistemas de Informação</strong>
                 </Typography>
+              </div>
+              <div className="botoes">
                 <Button variant="contained" color="inherit" size="small">
                   Área do Aluno
                 </Button>
@@ -212,14 +196,6 @@ function User() {
             </CardUsuario>
           </Content>
         </CardContent>
-        {/* <CardActions style={{ justifyContent: "end" }}>
-          <Button variant="contained" color="inherit" size="small">
-            Área do Aluno
-          </Button>
-          <Button variant="contained" color="error" size="small">
-            Sair
-          </Button>
-        </CardActions> */}
       </Card>
     </>
   );

@@ -18,7 +18,7 @@ root.render(
           <Route exact path="/" component={Home} />
           <Route path="/NotasFaltas" component={NotasFaltas} />
           <Route path="/Boletim" component={Boletim} />
-          <Route path="/ModalBoletim" component={ModalBoletim} />{" "}
+          <Route path="/ModalBoletim" component={ModalBoletim} />
           {/* Rota para o modal */}
         </App>
       </Switch>

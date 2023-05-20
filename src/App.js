@@ -119,7 +119,7 @@ export function App(props) {
       subMenus: [
         {
           nome: "Notas e Faltas",
-          path: "notasFaltas",
+          path: "NotasFaltas",
           icone: ImportContactsIcon,
         },
         { nome: "Horários", path: "notasFaltas", icone: ListAltIcon },
