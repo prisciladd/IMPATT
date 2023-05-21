@@ -111,7 +111,11 @@ export function App(props) {
     {
       menuPai: "Carteirinha",
       subMenus: [
-        { nome: "Ir para carteirinha", path: "notasFaltas", icone: BadgeIcon },
+        {
+          nome: "Ir para carteirinha",
+          path: "", //por enquanto manda para home
+          icone: BadgeIcon,
+        },
       ],
     },
     {
@@ -122,7 +126,11 @@ export function App(props) {
           path: "NotasFaltas",
           icone: ImportContactsIcon,
         },
-        { nome: "Horários", path: "notasFaltas", icone: ListAltIcon },
+        {
+          nome: "Horários",
+          path: "", // por enquanto manda para home
+          icone: ListAltIcon,
+        },
       ],
     },
     {
@@ -130,7 +138,7 @@ export function App(props) {
       subMenus: [
         {
           nome: "Secretária/Financeiro",
-          path: "notasFaltas",
+          path: "", //por enquanto manda para home
           icone: PostAddIcon,
         },
       ],
@@ -140,7 +148,7 @@ export function App(props) {
       subMenus: [
         {
           nome: "Vagas para Estágio",
-          path: "vagasEstagio",
+          path: "", //por enquanto manda para home
           icone: WorkOutlineIcon,
         },
       ],
