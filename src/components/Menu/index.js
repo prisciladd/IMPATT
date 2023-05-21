@@ -1,7 +1,7 @@
 import ItemMenu from "./ItemMenu";
 import { useState } from "react";
 import styled from "styled-components";
-import { BoxTitle, BoxText, List, BoxSmall } from "../../pages/Home/HomeStyles";
+import { BoxSmall, BoxTitle, BoxText, List } from "../../styles/BoxStyles";
 
 const StyledDiv = styled.div`
   /* @media (max-width:600px){
@@ -119,7 +119,7 @@ function Menu() {
                 </a>
               </li>
               <li className="menu-vertical_all">
-                <a href="/aluno/horario-aula.php">
+                <a href="../Horario/index.js">
                   <i className="icon-plus"></i>Horários
                 </a>
               </li>

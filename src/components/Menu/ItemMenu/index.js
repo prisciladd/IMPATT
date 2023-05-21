@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Box, BoxTitle, BoxText, List } from "../../../pages/Home/HomeStyles";
+import {  List } from "../../../styles/BoxStyles";
 
 const Styles= styled.div`
 

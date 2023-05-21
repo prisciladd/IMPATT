@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BoxText } from "../../pages/Home/HomeStyles";
+import {BoxText } from "../../styles/BoxStyles.js";
 import px2vw from "../../utils/px2vw";
 
 const Styles= styled.div`
@@ -68,6 +68,7 @@ const Styles= styled.div`
     strong{
         padding:5px;
     }
+
  `;
 
 function User(){
