@@ -13,10 +13,10 @@ const Content = styled.div`
 const Titulo = styled.h3`
   font-family: "EurostileLTStd", "Trebuchet MS", sans-serif;
   color: #333333;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 300; /* Deixa a fonte mais magra */
   @media (max-width: 600px) {
-    font-size: 25px;
+    font-size: 22px;
   }
 `;
 
