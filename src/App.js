@@ -61,6 +61,7 @@ const MenuUser = styledComponents.div`
 //responsavel pelo conteudo do meio da pagina
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
   ({ theme, open }) => ({
+    backgroundColor: "#ecebeb",
     overflowX: "hidden", // evita scroll lateral quando aberto em celular
     flexGrow: 1,
     padding: theme.spacing(3),
@@ -68,6 +69,7 @@ const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
+
     marginLeft: `-${drawerWidth}px`,
     ...(open && {
       transition: theme.transitions.create("margin", {
@@ -148,7 +150,7 @@ export function App(props) {
       subMenus: [
         {
           nome: "Vagas para Estágio",
-          path: "", //por enquanto manda para home
+          path: "VagasEstagio", //por enquanto manda para home
           icone: WorkOutlineIcon,
         },
       ],

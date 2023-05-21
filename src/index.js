@@ -2,10 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./index.css";
+
 import Home from "./components/Home";
 import NotasFaltas from "./components/NotasFaltas";
 import Boletim from "./components/Boletim";
 import ModalBoletim from "./components/ModalBoletim";
+import VagasEstagio from "./components/VagasEstagio";
+
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import App from "./App";
 
@@ -19,6 +22,7 @@ root.render(
           <Route path="/NotasFaltas" component={NotasFaltas} />
           <Route path="/Boletim" component={Boletim} />
           <Route path="/ModalBoletim" component={ModalBoletim} />
+          <Route path="/VagasEstagio" component={VagasEstagio} />
           {/* Rota para o modal */}
         </App>
       </Switch>
