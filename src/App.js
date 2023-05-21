@@ -126,12 +126,6 @@ export function App(props) {
       ],
     },
     {
-      menuPai: "Financeiro Online",
-      subMenus: [
-        { nome: "Financeiro", path: "notasFaltas", icone: AttachMoneyIcon },
-      ],
-    },
-    {
       menuPai: "Requerimentos",
       subMenus: [
         {
