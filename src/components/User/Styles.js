@@ -100,6 +100,10 @@ const BotaoCardUsuario = styled.button`
     ${(props) => props.backgroundColorPrimaria} 0%,
     ${(props) => props.backgroundColorSecundaria} 100%
   );
+
+  @media (max-width: 600px) {
+    padding: 5px 10px;
+  }
 `;
 
 export {
