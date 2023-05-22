@@ -1,116 +1,113 @@
-import React from "react";
-import { Styles } from './Styles';
+import * as React from 'react';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
 import { Link } from 'react-router-dom';
-import { Box, BoxTitle, BoxText} from "../../styles/BoxStyles";
+import { Styles } from './Styles';
 
-
-
-function Content(){
-    return(       
-        <Box>
-            <Styles>
-                <div class="span10" id="container-notes">
-                    <div class="title-default">
-                        <BoxTitle>
-                            <h3>NOTAS E FALTAS</h3>
-                        </BoxTitle>
-                        <div class="accessibility" count="0">
-                        </div>
-
-                        <BoxText>
-                        <div class="col-lg-4">
-                            <nav class="breadcrumb-container" aria-label="breadcrumb">
-                          
-
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item breadcrumb-item-home">
-                                            <a href="/">Home</a>
-                                        </li>
-                                        <li class="separator"></li>
-                                        <li class="breadcrumb-item active" aria-current="page">  Notas e Faltas</li>
-                                    </ol>
-                                  
-                       
-                            </nav>
-                        </div>
-                        </BoxText>
-                    </div>
-                    <div class="well-fit-default span12">
-                        <BoxText>
-                        <div class="container span12" id="contents-notes">
-                            <div class="row-fluid">
-                            <div className="table-responsive">
-                               
-                                    <table className="table table-striped table-bordered table-condensed table-hover">
-                                        <thead>
-                                        <tr>
-                                            <th></th>
-                                            <th>Período</th>
-                                            <th>Curso</th>
-                                            <th>Turma</th>
-                                            <th>Série</th>
-                                            <th>Situação da Matrícula</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr className="table-light">
-                                            <td >
-                                            <Link to="/Boletim">
-                                                <button className="btn btn-boletim">
-                                                    <span className="visualization">Visualizar </span>
-                                                    <img src="/search.png" alt="Ícone de pesquisa" />
-                                                </button>
-                                            </Link>
-                                            </td>
-                                            <td>2020/2</td>
-                                            <td>Curso de Sistemas de Informação</td>
-                                            <td>SI 3B NOITE</td>
-                                            <td>3º Semestre</td>
-                                            <td>Concluída</td>
-                                        </tr>
-                                        <tr className="table-light">
-                                            <td>
-                                            <Link to="/Boletim">
-                                                <button className="btn btn-boletim">
-                                                    <span className="visualization">Visualizar </span>
-                                                    <img src="/search.png" alt="Ícone de pesquisa" />
-                                                </button>
-                                            </Link>
-                                            </td>
-                                            <td>2020/1</td>
-                                            <td>Curso de Sistemas de Informação</td>
-                                            <td>SI 2B NOITE</td>
-                                            <td>2º Semestre</td>
-                                            <td>Concluída</td>
-                                        </tr>
-                                        <tr className="table-light">
-                                            <td>
-                                            <Link to="/Boletim">
-                                                <button className="btn btn-boletim">
-                                                    <span className="visualization">Visualizar </span>
-                                                    <img src="/search.png" alt="Ícone de pesquisa" />
-                                                </button>
-                                            </Link>
-                                            </td>
-                                            <td>2019/2</td>
-                                            <td>Curso de Sistemas de Informação</td>
-                                            <td>SI 1B NOITE</td>
-                                            <td>1º Semestre</td>
-                                            <td>Concluída</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                         
-                            </div>
-                            </div>
-                        </div>
-                        </BoxText>
-                    </div>
-                </div>                
-            </Styles>
-        </Box> 
-    );
-
+function createData(name, Período, Curso, Turma, Série, Situação) {
+  return { name, Período, Curso, Turma, Série, Situação };
 }
 
-export default Content;
+const rows = [
+  createData(
+    <Link to="/Boletim">
+      <button className="btn btn-boletim">
+      <span className="visualization">Visualizar </span>
+      <img src="/search.png" alt="Ícone de pesquisa" />
+      </button>
+      </Link>,'2023/1','Curso de Sistemas de Informação','SI 8A NOITE','8º Semestre','Ativa'),
+  createData(
+    <Link to="/Boletim">
+      <button className="btn btn-boletim">
+      <span className="visualization">Visualizar </span>
+      <img src="/search.png" alt="Ícone de pesquisa" />
+      </button>
+    </Link>,'2022/2','Curso de Sistemas de Informação','SI 7A NOITE','7º Semestre','Concluída'),
+  createData(
+    <Link to="/Boletim">
+      <button className="btn btn-boletim">
+      <span className="visualization">Visualizar </span>
+      <img src="/search.png" alt="Ícone de pesquisa" />
+      </button>
+    </Link>,'2022/1','Curso de Sistemas de Informação','SI 6A NOITE','6º Semestre','Concluída'),
+  createData(
+    <Link to="/Boletim">
+      <button className="btn btn-boletim">
+      <span className="visualization">Visualizar </span>
+      <img src="/search.png" alt="Ícone de pesquisa" />
+      </button>
+    </Link>,'2021/2','Curso de Sistemas de Informação','SI 5A NOITE','5º Semestre','Concluída'),
+  createData(
+    <Link to="/Boletim">
+      <button className="btn btn-boletim">
+      <span className="visualization">Visualizar </span>
+      <img src="/search.png" alt="Ícone de pesquisa" />
+      </button>
+    </Link>,'2021/1','Curso de Sistemas de Informação','SI 4B NOITE','4º Semestre','Concluída'),
+  createData(
+    <Link to="/Boletim">
+      <button className="btn btn-boletim">
+      <span className="visualization">Visualizar </span>
+      <img src="/search.png" alt="Ícone de pesquisa" />
+      </button>
+    </Link>,'2020/2','Curso de Sistemas de Informação','SI 3B NOITE','3º Semestre','Concluída'),
+  createData(
+    <Link to="/Boletim">
+      <button className="btn btn-boletim">
+      <span className="visualization">Visualizar </span>
+      <img src="/search.png" alt="Ícone de pesquisa" />
+      </button>
+    </Link>,'2020/1','Curso de Sistemas de Informação','SI 2B NOITE','2º Semestre','Concluída'),
+  createData(
+    <Link to="/Boletim">
+      <button className="btn btn-boletim">
+      <span className="visualization">Visualizar </span>
+      <img src="/search.png" alt="Ícone de pesquisa" />
+      </button>
+    </Link>,'2019/2','Curso de Sistemas de Informação','SI 1B NOITE','1º Semestre','Concluída'),
+  
+];
+
+export default function BasicTable() {
+  return (
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 375 }} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell></TableCell>
+            <TableCell align="center">Período</TableCell>
+            <TableCell align="center">Curso</TableCell>
+            <TableCell align="center">Turma</TableCell>
+            <TableCell align="center">Série</TableCell>
+            <TableCell align="center">Situação da Matrícula</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            
+            <TableRow
+            key={row.name}
+            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+            >
+                <Styles>
+              <TableCell component="th" scope="row">
+                {row.name}
+              </TableCell>
+              </Styles>
+              <TableCell align="center">{row.Período}</TableCell>
+              <TableCell align="center">{row.Curso}</TableCell>
+              <TableCell align="center">{row.Turma}</TableCell>
+              <TableCell align="center">{row.Série}</TableCell>
+              <TableCell align="center">{row.Situação}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+}

@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Styles= styled.div`    
-    width:100vw;
+/*     width:100vw;
     height:100vh;
     display:flex;
-
-    table {
+ */
+/*     table {
         border-collapse: collapse;
         width: 100%;
         max-width: 100%;
@@ -18,18 +18,16 @@ export const Styles= styled.div`
         text-align: center;
         background-color: #DDDDDD;
       }
-
+*/
     img {
         height: 15px;
         width: 15px;
         margin-left: 5px;
-    }
+    } 
 
     .btn-boletim {
       background-color: #F8F8F8;
-      border-color: #F8F8F8;
-      color: #F8F8F8;
-      text-transform: uppercase;
+      border-color: #F8F8F8;  
       font-weight: bold;
       display: inline-flex;
       align-items: center;
@@ -45,7 +43,7 @@ export const Styles= styled.div`
       border-radius: 5px;
     }
 
-    .title-default {
+ /*    .title-default {
         padding: 10px;
     }
 
@@ -81,5 +79,5 @@ export const Styles= styled.div`
   margin: 0;
   padding: 0;
 }
-
+ */
 `;

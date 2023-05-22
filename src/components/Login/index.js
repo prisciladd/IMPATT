@@ -92,8 +92,9 @@ function Login(){
                        
                             <p>Esqueceu a senha?</p>
                         <div id="button">
-
-                            <Button variant="contained">FAZER LOGIN</Button>
+                            <a href="/Home">
+                                <Button variant="contained">FAZER LOGIN</Button>
+                            </a>
                         </div>
                     </div>
 </Box>

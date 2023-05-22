@@ -11,10 +11,10 @@ function App(props) {
   return (
     <>
       <Global />
-     {/*  <User />
-      <Header /> */}
+      <User />
+      <Header /> 
       <Container>
-        {/* <Menu /> */}
+        <Menu />
         <div className="main">
           <div className="content" id="content">
             {props.children}
