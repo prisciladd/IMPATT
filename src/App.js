@@ -229,7 +229,7 @@ export function App(props) {
               </Typography>
               <Divider />
               {itemMenu.subMenus.map((subMenu) => (
-                <Link to={subMenu.path}>
+                <Link style={{ textDecoration: "none" }} to={subMenu.path}>
                   <a
                     href={subMenu.path}
                     key={subMenu.nome}
@@ -238,7 +238,9 @@ export function App(props) {
                     <ListItem
                       key={subMenu.nome}
                       disablePadding
-                      style={{ margin: 5 }}
+                      style={{
+                        margin: 5,
+                      }}
                     >
                       <ListItemButton>
                         <ListItemIcon>
