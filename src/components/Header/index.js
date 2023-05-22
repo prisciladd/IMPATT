@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Container, Box, BoxTitle, BoxText } from "../../pages/Home/HomeStyles";
 
 const StyledDiv = styled.div`
   @media (max-width: 600px) {

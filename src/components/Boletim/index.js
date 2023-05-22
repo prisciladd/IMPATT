@@ -4,6 +4,7 @@ import ReactModal from 'react-modal';
 import { Link } from 'react-router-dom';
 import { Styles } from './Styles';
 import ModalBoletim from '../ModalBoletim';
+import { Box, BoxTitle, BoxText, List } from "../../styles/BoxStyles";
 
 
 function Content(){
@@ -38,77 +39,87 @@ function Content(){
 
   return (
     <Styles>
+      <Box>
       <div>
         {/* Conteúdo da tela "boletim" */}
-        
-          <h1>NOTAS E FALTAS</h1>
-
+          <BoxTitle>
+            <h3>NOTAS E FALTAS</h3>
+          </BoxTitle>
           <div class="hierarchy">
-              <ul class="breadcrumb">
+              <List>
+                <BoxText>
+
+                  <ul class="breadcrumb">
+                      
+                      <li>
+                        <Link to = "/">
+                          <a href="/">Home</a> <span class="divider">&gt;</span>
+                        </Link>
+                      </li>
                   
-                  <li>
-                    <Link to = "/">
-                      <a href="/">Home</a> <span class="divider">&gt;</span>
-                    </Link>
-                  </li>
-              
-                  <li>
-                    <Link to = "/NotasFaltas">
-                      <a href="/NotasFaltas" >Notas e Faltas</a> <span class="divider">&gt;</span>
-                    </Link>
-                  </li>
-              
-                  <li class="active">Boletim</li>
-              
-              </ul>
+                      <li>
+                        <Link to = "/NotasFaltas">
+                          <a href="/NotasFaltas" >Notas e Faltas</a> <span class="divider">&gt;</span>
+                        </Link>
+                      </li>
+                  
+                      <li class="active">Boletim</li>
+                  
+                  </ul>
+                </BoxText>
+              </List>
           </div>
 
           <div id="printer" data-codigo="101183">
+          <BoxText>
 
             {/* <!------------------------- CABEÇALHO ----------------------------> */}
             <div class="contents-bulletin container span12">
               <div class="row-fluid">
-                <table class="table table-bordered" id="table-dados-aluno">
-                  <thead>
-                    <tr>
-                    <th class="borderless"></th>
-                    <th class="borderless"></th>
-                    <th class="borderless"></th>
-                    <th class="borderless"></th>
-                    <th class="borderless"></th>
-                    <th class="borderless"></th>
-                    <th class="borderless"></th>
-                    <th class="borderless"></th>
-                    <th class="borderless"></th>
-                    <th class="borderless"></th>
-                    <th class="borderless"></th>
-                    <th class="borderless"></th>
-                    <th class="borderless"></th>
-                    <th class="borderless"></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td rowspan="2" >
-                        <img src="logoHeader.png" alt="" id="print-img-logo"></img>
-                      </td>
-                      <td colspan="10" class="table-left"><span class="bold">Nome: </span>Priscila da Dalt</td>
-                      <td colspan="1" class="table-left"><span class="bold">RA: </span>1901843</td>            
-                      <td colspan="2"><span class="bold">Ano: </span>2023/1</td>
-                    </tr>
-                    <tr>
-                      <td colspan="9" class="table-left"><span class="bold">Curso: </span>Curso de Sistemas de Informação</td>
-                      <td colspan="3" id="label-semester"><span class="bold">Semestre: </span>3º Semestre</td>
-                      <td colspan="2"><span class="bold">Turma: </span>SI 3A NOITE</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <List>
+                  <table class="table table-bordered" id="table-dados-aluno">
+                    <thead>
+                      <tr>
+                      <th class="borderless"></th>
+                      <th class="borderless"></th>
+                      <th class="borderless"></th>
+                      <th class="borderless"></th>
+                      <th class="borderless"></th>
+                      <th class="borderless"></th>
+                      <th class="borderless"></th>
+                      <th class="borderless"></th>
+                      <th class="borderless"></th>
+                      <th class="borderless"></th>
+                      <th class="borderless"></th>
+                      <th class="borderless"></th>
+                      <th class="borderless"></th>
+                      <th class="borderless"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td rowspan="2" >
+                          <img src="logoHeader.png" alt="" id="print-img-logo"></img>
+                        </td>
+                        <td colspan="10" class="table-left"><span class="bold">Nome: </span>Priscila da Dalt</td>
+                        <td colspan="1" class="table-left"><span class="bold">RA: </span>1901843</td>            
+                        <td colspan="2"><span class="bold">Ano: </span>2023/1</td>
+                      </tr>
+                      <tr>
+                        <td colspan="9" class="table-left"><span class="bold">Curso: </span>Curso de Sistemas de Informação</td>
+                        <td colspan="3" id="label-semester"><span class="bold">Semestre: </span>3º Semestre</td>
+                        <td colspan="2"><span class="bold">Turma: </span>SI 3A NOITE</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </List>
               </div>
             </div>
 
             {/* <!---------------------------- BOLETIM ------------------------------------> */}
             <div class="contents-bulletin container" id="div_bulletin">
               <div class="row-fluid">
+                <List>
                 <table class="table table-bordered" id="table-boletim" data-cfgacad="">
                   <thead>
                     <tr>
@@ -183,7 +194,7 @@ function Content(){
                                 alt="Clique aqui e veja a composição das notas de AC"
                                 title="Clique aqui e veja a composição das notas de AC"
                                 src="/plus.png"
-                              ></img>
+                                ></img>
                             </a>
                           {/* </Link> */}
 	
@@ -359,6 +370,7 @@ function Content(){
                           <td class="nota-mf"></td>
                           <td>Indefinido</td>
                       </tr>
+
                       <tr>
                           <th colspan="7" class="table-left obs"><b>Observações: </b><span>Média mínima para aprovação 6,0(seis) com 75% de frequência.</span></th>
                           <th colspan="5" class="table-left">
@@ -369,6 +381,7 @@ function Content(){
                       </tr>
                   </tbody>
                 </table>
+                </List>
                 <ReactModal
                   isOpen={showModal}
                   onRequestClose={() => setShowModal(false)}
@@ -382,19 +395,12 @@ function Content(){
 
               </div>
             </div>
-
-            
-
-            
-      
+            </BoxText>
           </div>
-          
-      
-
-          
           
         {/* Adicione os elementos e componentes necessários para a tela "boletim" */}
       </div>
+      </Box>
     </Styles>
   );
   

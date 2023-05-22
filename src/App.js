@@ -137,7 +137,7 @@ export function App(props) {
         },
         {
           nome: "Horários",
-          path: "", // por enquanto manda para home
+          path: "Horario", // por enquanto manda para home
           icone: ListAltIcon,
         },
       ],

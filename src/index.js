@@ -11,6 +11,8 @@ import VagasEstagio from "./components/VagasEstagio";
 
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import App from "./App";
+import Horario from "./components/Horario";
+import Login from "./components/Login";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -19,10 +21,13 @@ root.render(
       <Switch>
         <App>
           <Route exact path="/" component={Home} />
+          <Route exact path="/Home" component={Home} />
+          <Route exact path="/login" component={Login} />
           <Route path="/NotasFaltas" component={NotasFaltas} />
           <Route path="/Boletim" component={Boletim} />
           <Route path="/ModalBoletim" component={ModalBoletim} />
           <Route path="/VagasEstagio" component={VagasEstagio} />
+          <Route path="/Horario" component={Horario} />
           {/* Rota para o modal */}
         </App>
       </Switch>

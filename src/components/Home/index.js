@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Box, BoxTitle, BoxText, List } from "../../pages/Home/HomeStyles";
+import { Box, BoxTitle, BoxText, List } from "../../styles/BoxStyles";
 
 const Styles= styled.div`
      @media (min-width: 768px) {
@@ -74,8 +74,13 @@ const Home = () =>{
                         </BoxText>
                     </div>
                     <div className="banner">
-                        <img src="banner.png" alt="logo faça parte do programa de embaixadores Impacta" />
+                        <img src="banner.png" alt="Faça parte do programa de embaixadores Impacta" />
                     </div>
+                </div>
+                <div>
+                    <div className="call2action">RESPONDA NOSSA PESQUISA</div>
+                    <div className="call2action">AJUDE A MELHORAR NOSSA FACULDADE</div>
+                    <div className="call2action">PARCERIA MICROSOFT IMAGINE</div>
                 </div>
         </Styles>
             </Box>
