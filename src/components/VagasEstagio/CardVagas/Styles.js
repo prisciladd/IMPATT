@@ -23,12 +23,13 @@ const Titulo = styled.h3`
 const Rotulo = styled.span`
   font-family: "EurostileLTStd", "Trebuchet MS", sans-serif;
   color: #9e9e9e;
-  font-weight: bold;
+  //font-weight: bold;
   font-weight: 300;
   @media (max-width: 600px) {
     font-size: 15px;
   }
 `;
+
 const Descricao = styled.p`
   font-weight: 500;
   font-family: "EurostileLTStd", "Trebuchet MS", sans-serif;
