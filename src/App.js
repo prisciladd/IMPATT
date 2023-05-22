@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 //componentes MUI
 import { styled, useTheme } from "@mui/material/styles";
@@ -22,7 +22,6 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ImportContactsIcon from "@mui/icons-material/ImportContacts";
 import ListAltIcon from "@mui/icons-material/ListAlt";
-import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import BadgeIcon from "@mui/icons-material/Badge";
 import PostAddIcon from "@mui/icons-material/PostAdd";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
@@ -71,13 +70,6 @@ const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
     }),
 
     marginLeft: `-${drawerWidth}px`,
-    ...(open && {
-      transition: theme.transitions.create("margin", {
-        easing: theme.transitions.easing.easeOut,
-        duration: theme.transitions.duration.enteringScreen,
-      }),
-      marginLeft: 0,
-    }),
   })
 );
 
@@ -108,6 +100,21 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 }));
 
 export function App(props) {
+  const menuRef = useRef(null);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   //Itens menu lateral
   const ItensMenu = [
     {
@@ -182,13 +189,11 @@ export function App(props) {
             >
               <MenuIcon />
             </IconButton>
-            {/* <Typography variant="h6" noWrap component="div">
-            Persistent drawer
-          </Typography> */}
           </Toolbar>
         </ToolbarStyle>
       </AppBar>
       <Drawer
+        ref={menuRef}
         sx={{
           width: drawerWidth,
           flexShrink: 0,
