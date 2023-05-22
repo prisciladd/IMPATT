@@ -1,91 +1,65 @@
 import React from "react";
 import styled from "styled-components";
 import { Box, BoxTitle, BoxText, List } from "../../styles/BoxStyles";
+import CardMural from "./CardMural";
 
-const Styles= styled.div`
-     @media (min-width: 768px) {
-        
-        #home{
-            display: flex;
-            flex-direction: row;
-        }
-}
-
-    img{
-        width:500px;
-        margin-left:10px;
+const Styles = styled.div`
+  @media (min-width: 768px) {
+    #home {
+      display: flex;
+      flex-direction: row;
     }
+  }
 
-    li{
-        margin-bottom:3px;
-        padding:5px;
-        background-color: #ffad39;
-    }
+  img {
+    width: 500px;
+    margin-left: 10px;
+  }
 
-    li:nth-child(n+4){
-        background-color: #e1e1e1;
-    }
+  li {
+    margin-bottom: 3px;
+    padding: 5px;
+    background-color: #ffad39;
+  }
 
-
+  li:nth-child(n + 4) {
+    background-color: #e1e1e1;
+  }
 `;
 
-const Home = () =>{
-    return(
-        <Box>
-            <Styles>
-                <div id="home">
-                    <div className="mural">
-                        <BoxTitle>
-                            <h3>MURAL DE RECADOS</h3>
-                        </BoxTitle>
-                        <BoxText>
-                            <List>
-                                    <li>
-                                        <p>
-                                        CI: 09/2023 - REF.: Atividades Presenciais 03/04 - Campus Paraíso
-                                        </p>
-                                        Prezados(as)...
-                                    </li>
-                                    <li>
-                                        <p>
-                                        CI 03/2023 - Início das Aulas 2023 - Faculdade Impacta
-                                        </p>
-                                        Prezado(a) Aluno(a),
-                                    </li>
-                                    <li>
-                                        <p>
-                                            Regulamento Prova PAI 2023/1
-                                        </p>
-                                            Prezados (as) Alunos (as),
-                                    </li>
-                                    <li>
-                                        <p>
-                                            Notificação Emissão Boletos
-                                        </p>
-                                            Prezado(a) Aluno(a),
-                                    </li>
-                                    <li>
-                                        <p>
-                                            Achados e Perdidos
-                                        </p>
-                                            Todos os objetos e documentos encontrados nas dependências da Faculdade
-                                    </li>
-                            </List>
-                        </BoxText>
-                    </div>
-                    <div className="banner">
-                        <img src="banner.png" alt="Faça parte do programa de embaixadores Impacta" />
-                    </div>
-                </div>
-                <div>
-                    <div className="call2action">RESPONDA NOSSA PESQUISA</div>
-                    <div className="call2action">AJUDE A MELHORAR NOSSA FACULDADE</div>
-                    <div className="call2action">PARCERIA MICROSOFT IMAGINE</div>
-                </div>
-        </Styles>
-            </Box>
-    );
+const Titulo = styled.h1`
+  font-family: "EurostileBold", "Trebuchet MS", sans-serif;
+  color: #002953;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 800; /* Deixa a fonte mais magra */
 
-}
+  @media (max-width: 600px) {
+    font-size: 30px;
+  }
+`;
+
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 30px;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+`;
+
+const Home = () => {
+  return (
+    <>
+      <Content>
+        <Titulo>MURAL DE RECADOS</Titulo>
+        <CardMural />
+      </Content>
+    </>
+  );
+};
 
 export default Home;
