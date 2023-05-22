@@ -85,13 +85,14 @@ const Botoes = styled.div`
 const BotaoCardUsuario = styled.button`
   background-color: ${(props) => props.backgroundColor};
   color: #fff;
-  padding: 10px 20px;
+  padding: 5px 10px;
   margin: 5px;
   border: 3px;
   border-radius: 7px;
   cursor: pointer;
   font-family: "EurostileBold", "Trebuchet MS", sans-serif;
   font-weight: 800;
+  text-decoration: none;
   transition: transform 0.3s, box-shadow 0.3s;
   transform-style: preserve-3d;
   perspective: 1000px;
@@ -102,7 +103,7 @@ const BotaoCardUsuario = styled.button`
   );
 
   @media (max-width: 600px) {
-    padding: 5px 10px;
+    padding: 1px 6px;
   }
 `;
 

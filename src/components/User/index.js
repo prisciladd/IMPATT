@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import {
   Content,
   Box,
@@ -29,12 +31,16 @@ function User() {
           </DadosCurso>
           <Botoes>
             <BotaoCardUsuario
+              as={Link}
+              to="/"
               backgroundColorPrimaria={botaoAreaAlunoColorPrimaria}
               backgroundColorSecundaria={botaoAreaAlunoColorSegundaria}
             >
               Área do Aluno
             </BotaoCardUsuario>
             <BotaoCardUsuario
+              as={Link}
+              to="/"
               backgroundColorPrimaria={botaoSairColorPrimaria}
               backgroundColorSecundaria={botaoSairColorSegundaria}
             >
