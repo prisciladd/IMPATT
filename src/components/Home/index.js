@@ -17,11 +17,25 @@ const Titulo = styled.h1`
 
 const Content = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   //height: 100%; // estende a cor cinza de fundo
 
   @media (max-width: 600px) {
-    //bypass
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+const BannerPropaganda = styled.img`
+  width: 40%;
+  height: 40%;
+  margin-left: 3%;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 100%;
+    margin-left: 0%;
+    margin-top: 5%;
   }
 `;
 
@@ -31,6 +45,10 @@ const Home = () => {
       <Titulo>MURAL DE RECADOS</Titulo>
       <Content>
         <CardMural />
+        <BannerPropaganda
+          src="./banner.png"
+          alt="Banner propaganda aos alunos "
+        />
       </Content>
     </>
   );
