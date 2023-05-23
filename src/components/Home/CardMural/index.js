@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Content,
-  Titulo,
-  ItemMenu,
-  Rotulo,
-  Descricao,
-  LinhaDivisao,
-} from "./Styles.js";
+import { Titulo, ItemMenu, Rotulo, ScrollableContainer } from "./Styles.js";
 
 function CardMural(props) {
   const avisos = [
@@ -36,7 +29,7 @@ function CardMural(props) {
 
   return (
     <>
-      <Content>
+      <ScrollableContainer>
         {avisos &&
           avisos.map((aviso) => {
             return (
@@ -48,7 +41,7 @@ function CardMural(props) {
               </>
             );
           })}
-      </Content>
+      </ScrollableContainer>
     </>
   );
 }

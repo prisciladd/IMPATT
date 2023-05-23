@@ -1,19 +1,26 @@
 import styled from "styled-components";
 
-const Content = styled.div`
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  padding: 10px;
-
-  @media (max-width: 600px) {
-    padding: 0px;
-    width: 70%;
-    justify-content: start;
-    align-items: start;
-    //overflow-y: scroll; /* ou overflow-y: scroll; */
-  }
+const ScrollableContainer = styled.div`
+  overflow-y: auto;
+  height: 100px; /* Defina a altura desejada para o contêiner de rolagem */
 `;
+
+// const Content = styled.div`
+//   //overflow-y: scroll; /* ou overflow-y: scroll; */
+
+//   /* display: flex;
+//   flex: 1;
+//   flex-direction: column;
+//   padding: 10px; */
+
+//   @media (max-width: 600px) {
+//     //height: 50px;
+//     /* padding: 0px;
+//     justify-content: center;
+//     align-items: center; */
+//     //overflow-y: scroll; /* ou overflow-y: scroll; */
+//   }
+// `;
 
 const ItemMenu = styled.div`
   background: #dddddd;
@@ -25,8 +32,8 @@ const ItemMenu = styled.div`
 
   @media (max-width: 600px) {
     font-size: 22px;
-    width: 150%;
-    //height: 1%;
+    width: 100%;
+    height: 55px;
   }
 `;
 
@@ -62,4 +69,11 @@ const LinhaDivisao = styled.hr`
   margin: 10px 0;
 `;
 
-export { Content, ItemMenu, Titulo, Rotulo, Descricao, LinhaDivisao };
+export {
+  ItemMenu,
+  Titulo,
+  Rotulo,
+  Descricao,
+  LinhaDivisao,
+  ScrollableContainer,
+};
