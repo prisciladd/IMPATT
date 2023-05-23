@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import CardInformativo from "./CardInformativo";
 import CardMural from "./CardMural";
 
 const Titulo = styled.h1`
@@ -17,7 +18,30 @@ const Titulo = styled.h1`
 
 const Content = styled.div`
   display: flex;
+  flex-direction: column;
+  //height: 100%; // estende a cor cinza de fundo
+
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+const Main = styled.div`
+  display: flex;
   flex-direction: row;
+  //height: 100%; // estende a cor cinza de fundo
+
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+const Informativo = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   //height: 100%; // estende a cor cinza de fundo
 
   @media (max-width: 600px) {
@@ -44,11 +68,16 @@ const Home = () => {
     <>
       <Titulo>MURAL DE RECADOS</Titulo>
       <Content>
-        <CardMural />
-        <BannerPropaganda
-          src="./banner.png"
-          alt="Banner propaganda aos alunos "
-        />
+        <Main>
+          <CardMural />
+          <BannerPropaganda
+            src="./banner.png"
+            alt="Banner propaganda aos alunos "
+          />
+        </Main>
+        <Informativo>
+          <CardInformativo />
+        </Informativo>
       </Content>
     </>
   );
