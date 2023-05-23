@@ -2,32 +2,20 @@ import styled from "styled-components";
 
 const ScrollableContainer = styled.div`
   overflow-y: auto;
+  width: 40%;
   height: 100px; /* Defina a altura desejada para o contêiner de rolagem */
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
-
-// const Content = styled.div`
-//   //overflow-y: scroll; /* ou overflow-y: scroll; */
-
-//   /* display: flex;
-//   flex: 1;
-//   flex-direction: column;
-//   padding: 10px; */
-
-//   @media (max-width: 600px) {
-//     //height: 50px;
-//     /* padding: 0px;
-//     justify-content: center;
-//     align-items: center; */
-//     //overflow-y: scroll; /* ou overflow-y: scroll; */
-//   }
-// `;
 
 const ItemMenu = styled.div`
   background: #dddddd;
   border: 1px solid black;
   padding: 0px 1px 1px 8px;
-  width: 70%;
-  //height: 100%;
+  width: 100%;
+  height: 65%;
   margin-bottom: 6px;
 
   @media (max-width: 600px) {
