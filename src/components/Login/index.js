@@ -2,20 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import { Box, BoxText } from "../../styles/BoxStyles";
 import Button from '@mui/material/Button';
+import { Link } from "@mui/material";
 
 const Styles=styled.div`
 
 #main{
     overflow-x: hidden;
     overflow-y: hidden;
-    width:100%;
-    height:100%;
+
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
                        rgba(0, 0, 0, 0.5)), url("abstract-system-technology.jpg");
     background-repeat: no-repeat ;
-   
-
-
 }
 
 #content{
@@ -73,10 +70,9 @@ function Login(){
     return(
         <Styles>
             <BoxText>
-
             <div id="main">
                 <div id="content">
-<Box>
+                    <Box>
                     <div id="content-item">
                         <div id="field-image">
                             <img src="logoHeader2.png" alt="[Faculdade IMPACTA] "/>
@@ -92,11 +88,12 @@ function Login(){
                        
                             <p>Esqueceu a senha?</p>
                         <div id="button">
-
+                            <Link to="/home">
                             <Button variant="contained">FAZER LOGIN</Button>
+                            </Link>
                         </div>
                     </div>
-</Box>
+                    </Box>
                 </div>
             </div>
             </BoxText>

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Box, BoxTitle, BoxText } from "../../styles/BoxStyles";
+import { Box, BoxTitle, BoxText, Container } from "../../styles/BoxStyles";
 
 
 const Styles= styled.div`
@@ -14,21 +14,13 @@ const Styles= styled.div`
     @media (min-width: 760px){
         
         .item-header{
-            border-radius: 20px ;  
-            width:inherit;
-        }
-
-        #container > .container-item{
-            width:40%;
-            margin:5px;
+            border-radius: 20px;
         }
 
     }
 
     #box{
         border: 1px solid black;
-        width:100%;
-        height:100%;
         background-color: #d7d6d6;
         border-radius: 5px;
         opacity: 0.5;
@@ -38,60 +30,41 @@ const Styles= styled.div`
         text-align: center;
         color:black;
         font-weight: bold;
-        font-size: 20px;
     }
 
     #container{
         border: 0.5px solid grey;
-        width:initial;
-        height:100%;
-        align-items: center ;
-        justify-content: center ;
-        margin:5px;
         background-color: #d7d6d6;
         box-shadow: 5px 5px 10px ;
     }
 
     #header{
         border: 1px solid black;
-        width:initial;
-        height:40%;
         background-color: black ;
         color:white;
         text-align: center ;
         vertical-align: center ;
         margin:10px;
+        padding:10px;
         box-shadow: 5px 5px 10px ;
     }
 
     .container-item{
         border: 1px solid black;
         border-radius: 5px;
-        width:90%;
-        height:100%;
-        margin:10px;
-        display: inline-block;
-        justify-content:center ;
-        align-items: center;
         padding:10px;
         background-color: white ;
-        box-shadow: 3px 3px 10px ;
-        
+        box-shadow: 3px 3px 10px ;  
     }
 
     .item-header{
         background-color:black;
-        width:100%;
         height:40px;
-        margin:0;
-        padding:0;
-        border:0;
-       
+             
     }
 
     .item-header > p{
-        color:white;
-        
+        color:white;        
     }
 
     #header > p{
@@ -99,14 +72,7 @@ const Styles= styled.div`
     }
 
     .item-container > p{
-        font-size:14px;
-        text-align:left;
-        
-    }
-
-    .item-container{
-        padding-top: 10px ;
-        height:400px;
+        text-align:left;        
     }
 
     .item-container > hr{
@@ -117,13 +83,13 @@ const Styles= styled.div`
 
 function Horario(){
     return(
-        <Box>
-            <Styles>
+        <Container>
 
+        <Styles>
                 <BoxTitle>
                     <h3>QUADRO DE HORÁRIO</h3>
                 </BoxTitle>
-                <div id="box">
+            <div id="box">
                     <BoxText>
                         <p>Curso de Sistemas de Informação</p>
                         <div id="container">
@@ -132,7 +98,7 @@ function Horario(){
                                 8º semestre: SI 8A NOITE ( 13/02/2023 Á 26/06/2023 )
                                 </p>
                             </div>
-                        
+                            <Box>
                             <div class="container-item">
                                 <div class="item-header">
                                     <p>Segunda</p>
@@ -161,6 +127,8 @@ function Horario(){
                                     <br></br>
                                 </div>
                             </div>
+                            </Box>
+                            <Box>
                             <div class="container-item">
                                 <div class="item-header">
                                     <p>Terça</p>
@@ -189,6 +157,8 @@ function Horario(){
                                     <br></br>
                                 </div>
                             </div>
+                            </Box>
+                            <Box>
                             <div class="container-item">
                                 <div class="item-header">
 
@@ -218,6 +188,8 @@ function Horario(){
                                     <br></br>
                                 </div>
                             </div>
+                            </Box>
+                            <Box>
                             <div class="container-item">
                                 <div class="item-header">
 
@@ -247,11 +219,12 @@ function Horario(){
                                     <br></br>
                                 </div>
                             </div>         
+                            </Box>
                         </div>
                     </BoxText>
                 </div>
-            </Styles>
-        </Box>
+            </Styles> 
+        </Container>
     )
 }
 

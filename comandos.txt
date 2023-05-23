@@ -11,6 +11,14 @@ npm install react-router-dom
 npm install --save react-modal
 
 ****ADD MUI***
-npm install @mui/material @emotion/react @emotion/styled
-
-
+npm install @mui/material 
+@emotion/react 
+@emotion/styled 
+@mui/icons-material/Menu 
+@mui/icons-material/ChevronLeft
+@mui/icons-material/ChevronRight 
+@mui/icons-material/ImportContacts 
+@mui/icons-material/ListAlt 
+@mui/icons-material/Badge 
+@mui/icons-material/PostAdd
+@mui/icons-material/WorkOutline
