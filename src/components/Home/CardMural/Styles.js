@@ -26,7 +26,7 @@ const ItemMenu = styled.div`
 `;
 
 const Titulo = styled.h3`
-  font-family: "EurostileLTStd", "Trebuchet MS", sans-serif;
+  font-family: "EurostileBold", "Trebuchet MS", sans-serif;
   color: #333333;
   font-size: 16px;
   font-weight: 300; /* Deixa a fonte mais magra */

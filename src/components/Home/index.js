@@ -29,6 +29,7 @@ import CardMural from "./CardMural";
 
 const Titulo = styled.h1`
   font-family: "EurostileBold", "Trebuchet MS", sans-serif;
+  text-decoration: none solid rgb(0, 41, 83);
   color: #002953;
   text-transform: uppercase;
   font-size: 40px;
