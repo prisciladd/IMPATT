@@ -23,6 +23,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ImportContactsIcon from "@mui/icons-material/ImportContacts";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import BadgeIcon from "@mui/icons-material/Badge";
+import Homeicon from "@mui/icons-material/Home";
 import PostAddIcon from "@mui/icons-material/PostAdd";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 //componentes interno
@@ -119,12 +120,12 @@ export function App(props) {
   //Itens menu lateral
   const ItensMenu = [
     {
-      menuPai: "Carteirinha",
+      menuPai: "Área do Aluno",
       subMenus: [
         {
-          nome: "Ir para carteirinha",
-          path: "", //por enquanto manda para home
-          icone: BadgeIcon,
+          nome: "Home",
+          path: "Home", //por enquanto manda para home
+          icone: Homeicon,
         },
       ],
     },
@@ -140,16 +141,6 @@ export function App(props) {
           nome: "Horários",
           path: "Horario", // por enquanto manda para home
           icone: ListAltIcon,
-        },
-      ],
-    },
-    {
-      menuPai: "Requerimentos",
-      subMenus: [
-        {
-          nome: "Secretária/Financeiro",
-          path: "", //por enquanto manda para home
-          icone: PostAddIcon,
         },
       ],
     },

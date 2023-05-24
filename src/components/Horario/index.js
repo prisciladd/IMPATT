@@ -96,10 +96,10 @@ const Styles = styled.div`
     text-align: left;
   }
 
-  .item-container {
+  /* .item-container {
     padding-top: 10px;
     height: 400px;
-  }
+  } */
 
   .item-container > hr {
     margin-top: 10px;
@@ -120,7 +120,7 @@ const Titulo = styled.h1`
 
 function Horario() {
   return (
-    <Box>
+    <>
       <Styles>
         <Titulo>QUADRO DE HORÁRIOS</Titulo>
         <div id="box">
@@ -375,7 +375,7 @@ function Horario() {
           </BoxText>
         </div>
       </Styles>
-    </Box>
+    </>
   );
 }
 
