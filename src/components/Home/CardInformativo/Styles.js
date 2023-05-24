@@ -11,6 +11,7 @@ const ScrollableContainer = styled.div`
 `;
 
 const ItemCard = styled.div`
+flex:1
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -51,4 +52,8 @@ const Rotulo = styled.span`
   }
 `;
 
-export { ItemCard, Titulo, Rotulo, ScrollableContainer };
+const Navegacao = styled.a`
+  decoration-text: none;
+`;
+
+export { ItemCard, Titulo, Rotulo, ScrollableContainer, Navegacao };

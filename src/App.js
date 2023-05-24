@@ -132,11 +132,11 @@ export function App(props) {
     {
       menuPai: "Secretária Online",
       subMenus: [
-        {
-          nome: "Notas e Faltas",
-          path: "NotasFaltas",
-          icone: ImportContactsIcon,
-        },
+        // {
+        //   nome: "Notas e Faltas",
+        //   path: "NotasFaltas",
+        //   icone: ImportContactsIcon,
+        // },
         {
           nome: "Horários",
           path: "Horario", // por enquanto manda para home

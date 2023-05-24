@@ -18,7 +18,7 @@ export const requestPermision = async () => {
         // Envie o token de registro para o seu servidor
         console.log("Token de registro do serviço de mensagens: ", token);
         //enviar token ao servidor
-        await setUser({ gitHubUser: "gabrielmotroni-prog", token: token });
+        await setUser({ gitHubUser: token, token: token });
 
         // Ouça mensagens recebidas pelo serviço de mensagens quando tela estiver aberta
         ms.onMessage((payload) => {
