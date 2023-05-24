@@ -23,7 +23,19 @@ export const requestPermision = async () => {
         // Ouça mensagens recebidas pelo serviço de mensagens quando tela estiver aberta
         ms.onMessage((payload) => {
           console.log("Mensagem recebida: ", payload);
+          const { notification } = payload;
           // Trate a mensagem recebida aqui
+          navigator.serviceWorker.ready
+            .then((registration) => {
+              registration.showNotification(notification.title, {
+                body: notification.body,
+                icon: notification.icon,
+                // Outras opções de configuração da notificação
+              });
+            })
+            .catch((error) => {
+              console.log("Erro ao mostrar a notificação:", error);
+            });
         });
       } else {
         // Permissão negada ou ignorada
