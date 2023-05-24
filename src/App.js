@@ -27,6 +27,7 @@ import PostAddIcon from "@mui/icons-material/PostAdd";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 //componentes interno
 import { withRouter } from "react-router-dom";
+import Home from "./components/Home";
 import User from "./components/User";
 
 const drawerWidth = 240;
@@ -262,7 +263,7 @@ export function App(props) {
         <MenuUser>
           <User />
         </MenuUser>
-        {props.children}
+        {props.children ? props.children : <Home />}
       </Main>
     </Box>
   );
