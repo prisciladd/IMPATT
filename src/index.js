@@ -20,7 +20,6 @@ root.render(
     <Router>
       <Switch>
         <App>
-          <Route exact path="" component={Home} />
           <Route exact path="/" component={Home} />
           <Route exact path="/Home" component={Home} />
           <Route exact path="/login" component={Login} />
