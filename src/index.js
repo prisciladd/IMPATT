@@ -13,6 +13,8 @@ import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import App from "./App";
 import Horario from "./components/Horario";
 import Login from "./components/Login";
+//inicia firebase
+import "./firebaseConfig";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

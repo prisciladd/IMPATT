@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+
 import CardInformativo from "./CardInformativo";
 import CardMural from "./CardMural";
+import { requestPermision } from "../../service/PushNotificatons";
 
 const Titulo = styled.h1`
   font-family: "EurostileBold", "Trebuchet MS", sans-serif;
@@ -62,7 +64,7 @@ const BannerPropaganda = styled.img`
     margin-top: 5%;
   }
 `;
-
+requestPermision();
 const Home = () => {
   return (
     <>
