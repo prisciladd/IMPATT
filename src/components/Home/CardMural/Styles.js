@@ -18,7 +18,7 @@ const ItemMenu = styled.div`
   background: #dddddd;
   padding: 0px 1px 1px 8px;
   width: 100%;
-  height: 20%;
+  height: 24%;
   margin-bottom: 6px;
 
   @media (max-width: 600px) {
