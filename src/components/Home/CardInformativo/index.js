@@ -8,7 +8,7 @@ function CardInformativo(props) {
       descricao: "Prezados(as)...",
     },
     {
-      titulo: "AAJUDE A MELHORORAR NOSSA FACULDADE",
+      titulo: "AJUDE A MELHORORAR NOSSA FACULDADE",
       descricao: "Prezado(a) Aluno(a),",
     },
     {
