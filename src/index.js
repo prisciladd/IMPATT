@@ -15,10 +15,13 @@ import Horario from "./components/Horario";
 import Login from "./components/Login";
 //inicia firebase
 import "./firebaseConfig";
+//responsavel pelo tost oferecer instalacao app
+import InstallButton from "./components/InstallButton";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <InstallButton />
     <Router>
       <Switch>
         <App>

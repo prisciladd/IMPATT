@@ -30,7 +30,6 @@ import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import { withRouter } from "react-router-dom";
 import Home from "./components/Home";
 import User from "./components/User";
-import InstallButton from "./components/InstallButton";
 
 const drawerWidth = 240;
 
@@ -255,7 +254,6 @@ export function App(props) {
         <MenuUser>
           <User />
         </MenuUser>
-        <InstallButton />
         {props.children ? props.children : <Home />}
       </Main>
     </Box>
