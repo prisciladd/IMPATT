@@ -38,7 +38,9 @@ const InstallButton = () => {
   const notify = () => {
     return toast.info(
       <>
-        <button onClick={handleInstallClick}>Instale o IMPATT!</button>
+        <button onClick={handleInstallClick}>
+          Instale o IMPATT e melhore sua experiência!
+        </button>
       </>,
       {
         toastId: "customId",
