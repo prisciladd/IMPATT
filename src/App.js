@@ -130,7 +130,7 @@ export function App(props) {
       ],
     },
     {
-      menuPai: "Secretária Online",
+      menuPai: "Secretaria Online",
       subMenus: [
         // {
         //   nome: "Notas e Faltas",
