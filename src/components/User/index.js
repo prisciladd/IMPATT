@@ -23,8 +23,8 @@ function User() {
         <Box>
           <FotoUsuario />
           <DadosUsuario>
-            <Rotulo>Olá, Priscila</Rotulo>
-            <Rotulo>RA: 1902059</Rotulo>
+            <Rotulo>Olá, Aluno(a)</Rotulo>
+            <Rotulo>RA: 1234567</Rotulo>
           </DadosUsuario>
           <DadosCurso>
             <Rotulo>Curso: Sistemas de Informação</Rotulo>
