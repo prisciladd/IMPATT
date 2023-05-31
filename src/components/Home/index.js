@@ -73,7 +73,7 @@ const Home = () => {
         <Main>
           <CardMural />
           <BannerPropaganda
-            src="./banner.png"
+            src="./bannerReduzido.webp"
             alt="Banner propaganda aos alunos "
           />
         </Main>
