@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# IMPATT PWA
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O aplicativo IMPATT PWA é um aplicativo feito como experimento para o trabalho de término de curso do grupo STADIA 2023 da Faculdade Impacta Tecnologia, com objetivo de expor as vantagens e desvantagens da aplicação do Progress Web App ou Aplicativos Web Progressivos. Como alvo  da aplicação do PWA usamos o Portal do aluno da faculdade, por atender critérios como:
+Ser uma aplicação web tradicional, pela familiaridade comum entre o grupo, pode aplicar uma pesquisa mais direcionada. os principais módulos para que foram clonados: Notas e Faltas, Quadro de horário, vagas de estágio e tela principal. A escolha de tais  módulos foi guiada por uma pesquisa aplicada com alunos sobre seu acesso e principais módulos de acesso
 
-## Available Scripts
+## Recursos
 
-In the project directory, you can run:
+- Responsividade 1: Adaptacao a diferences tamanhos telas Desktop e Mobile atendendo o usuarios no seus diversos dispotivos 
+- Navegabilidade 2: Navegação clara e organizada por meio de menus, botões, links oferecendo experiência contínua entre ambos os formatos de tela testados.
+- Conectividade/Acesso Off-line 3: Por meio do Service Worker, pós instalado no primeiro acesso oferece ao usuario navegacao mais rapida offline.
+- Recurso 3: Com a implementação do uso de notificações e possbilidade de instacao do app na tela principal, oferece maior enjamento entre o usuario e a aplicacao
 
-### `npm start`
+## Instalação
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Para desenvolvimento
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Instale as dependências:
+   
+   ```bash
+   npm install
+   ```
 
-### `npm test`
+2. Execute em desenvolvimento:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   npm start
+   ```
+### Para versão de produção ( o Service Worker só é completamente ativado neste comando)
+1. Instale as dependências:
+   
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+2. Execute o projeto:
+   ```bash
+   npm run build
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   serve -s build
+   ```
+## Como usar
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Abra o aplicativo em um navegador.
+2. Autorize receber notificações
+3. Ao receber a mensagem para instalação, autorize a instalação ( navegador Safari é necessário selecionar `adicionar à tela inicial` diretamente nas opções do navegador manualmente).
+4. Navegue no aplicativo.
+5. Teste sem conectividade com a internet.
+6. Aguarda a notificação fora do aplicativo.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tecnologias utilizadas
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- HTML
+- CSS
+- JavaScript
+- React
+- Service Workers
+- LocalStorage
+- Firebase
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Autor
 
-## Learn More
+Gabriel dos Santos Motroni,
+Priscila da Dalt,
+Matheus Silva Marques
+## Recursos adicionais
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Link para acesso versão produção
+atualmenteo aplicativo está disponivel em produção acessivel atraves de:
+[Link para acesso clique aqui](https://impatt-git-main-prisciladd.vercel.app/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Arquitetura:
 
-### Code Splitting
+A arquitetura utilizada no React foi componentes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- src: O diretório principal que contém todo o código-fonte do aplicativo React.
+- components: Contém os componentes reutilizáveis do aplicativo.
+- styles: Contém os arquivos de estilo CSS ou pré-processados.
+- utils: Contém utilitários e funções auxiliares do aplicativo.
+- public: O diretório que contém arquivos estáticos, como o arquivo HTML base do aplicativo.
+- .env: quando projeto inicialmente localmente, usado para configurar variveis de ambiente refente os token/chaves necessario para conexão com Firebase qua
+- index.js: O ponto de entrada do aplicativo React, responsável por renderizar o componente raiz no elemento HTML do DOM.
+- App.js: O componente raiz do aplicativo, que contém a estrutura geral do aplicativo e define as rotas ou a lógica principal.
+- package.json: O arquivo de configuração do projeto que contém as dependências, scripts de execução e outras informações relevantes.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
