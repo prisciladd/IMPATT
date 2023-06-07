@@ -23,6 +23,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import Homeicon from "@mui/icons-material/Home";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
+import ImportContactsIcon from "@mui/icons-material/ImportContacts";
 //componentes interno
 import Home from "./components/Home";
 import User from "./components/User";
@@ -121,7 +122,7 @@ export function App(props) {
       subMenus: [
         {
           nome: "Home",
-          path: "Home", //por enquanto manda para home
+          path: "Home",
           icone: Homeicon,
         },
       ],
@@ -129,14 +130,14 @@ export function App(props) {
     {
       menuPai: "Secretaria Online",
       subMenus: [
-        // {
-        //   nome: "Notas e Faltas",
-        //   path: "NotasFaltas",
-        //   icone: ImportContactsIcon,
-        // },
+        {
+          nome: "Notas e Faltas",
+          path: "NotasFaltas",
+          icone: ImportContactsIcon,
+        },
         {
           nome: "Horários",
-          path: "Horario", // por enquanto manda para home
+          path: "Horario",
           icone: ListAltIcon,
         },
       ],
@@ -146,7 +147,7 @@ export function App(props) {
       subMenus: [
         {
           nome: "Vagas para Estágio",
-          path: "VagasEstagio", //por enquanto manda para home
+          path: "VagasEstagio",
           icone: WorkOutlineIcon,
         },
       ],
