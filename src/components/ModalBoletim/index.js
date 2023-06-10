@@ -41,8 +41,8 @@ const ModalBoletim = () => {
                         <tr onMouseEnter={() => handleRowHover(0)}
                         onMouseLeave={handleRowLeave}
                         className={hoveredRow === 0 ? 'highlighted-row' : ''}>
-                            <td>Atividades Complementares</td>
-                            <td>SI 8A NOITE</td>
+                            <td>Análise e Modelagem de Sistemas</td>
+                            <td>SI 3A NOITE</td>
                             <td>Regular</td><td></td><td></td><td></td><td></td><td></td><td></td>
                             <td>0</td>
                             <td>Indefinido</td>
@@ -50,8 +50,8 @@ const ModalBoletim = () => {
                         <tr onMouseEnter={() => handleRowHover(1)}
                         onMouseLeave={handleRowLeave}
                         className={hoveredRow === 1 ? 'highlighted-row' : ''}>
-                            <td>Computação Cognitiva</td>
-                            <td>SI 8A NOITE</td>
+                            <td>Desenvolvimento de Aplicações Distribuídas</td>
+                            <td>SI 3A NOITE</td>
                             <td>Regular</td><td>8,00</td><td>8,00</td><td></td><td></td><td></td><td>4,00</td>
                             <td>4</td>
                             <td>Indefinido</td>
@@ -59,8 +59,8 @@ const ModalBoletim = () => {
                         <tr onMouseEnter={() => handleRowHover(2)}
                         onMouseLeave={handleRowLeave}
                         className={hoveredRow === 2 ? 'highlighted-row' : ''}>
-                            <td>Estágio Supervisionado</td>
-                            <td>SI 8A NOITE</td>
+                            <td>Engenharia de Requisitos</td>
+                            <td>SI 3A NOITE</td>
                             <td>Regular</td><td></td><td></td><td></td><td></td><td></td><td></td>
                             <td>0</td>
                             <td>Indefinido</td>
@@ -68,8 +68,8 @@ const ModalBoletim = () => {
                         <tr onMouseEnter={() => handleRowHover(3)}
                         onMouseLeave={handleRowLeave}
                         className={hoveredRow === 3 ? 'highlighted-row' : ''}>
-                            <td>Governança de TI</td>
-                            <td>SI 8A NOITE</td>
+                            <td>Estrutura de Dados</td>
+                            <td>SI 3A NOITE</td>
                             <td>Regular</td><td></td><td></td><td></td><td></td><td></td><td></td>
                             <td>0</td>
                             <td>Indefinido</td>
@@ -77,8 +77,8 @@ const ModalBoletim = () => {
                         <tr onMouseEnter={() => handleRowHover(4)}
                         onMouseLeave={handleRowLeave}
                         className={hoveredRow === 4 ? 'highlighted-row' : ''}>
-                            <td>Sistemas Integrados de Gestão</td>
-                            <td>SI 8A NOITE</td>
+                            <td>Interface Homem Computador</td>
+                            <td>SI 3A NOITE</td>
                             <td>Regular</td><td>8,00</td><td>10,00</td><td></td><td></td><td></td><td>4,50</td>
                             <td>0</td>
                             <td>Indefinido</td>
@@ -86,8 +86,8 @@ const ModalBoletim = () => {
                         <tr onMouseEnter={() => handleRowHover(5)}
                         onMouseLeave={handleRowLeave}
                         className={hoveredRow === 5 ? 'highlighted-row' : ''}>
-                            <td>Trabalho de Conclusão de Curso - TCC II</td>
-                            <td>SI 8A NOITE</td>
+                            <td>Oficina de Projeto de Empresa 1</td>
+                            <td>SI 3A NOITE</td>
                             <td>Regular</td><td>7,00</td><td>5,00</td><td></td><td></td><td></td><td>3,00</td>
                             <td>12</td>
                             <td>Indefinido</td>

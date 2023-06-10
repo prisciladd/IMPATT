@@ -13,6 +13,7 @@ import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
+import ImportContactsIcon from '@mui/icons-material/ImportContacts';
 import ListItemText from "@mui/material/ListItemText";
 import styledComponents from "styled-components";
 //icones
@@ -23,7 +24,6 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import Homeicon from "@mui/icons-material/Home";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
-import ImportContactsIcon from "@mui/icons-material/ImportContacts";
 //componentes interno
 import Home from "./components/Home";
 import User from "./components/User";
@@ -122,7 +122,7 @@ export function App(props) {
       subMenus: [
         {
           nome: "Home",
-          path: "Home",
+          path: "Home", //por enquanto manda para home
           icone: Homeicon,
         },
       ],
@@ -137,7 +137,7 @@ export function App(props) {
         },
         {
           nome: "Horários",
-          path: "Horario",
+          path: "Horario", // por enquanto manda para home
           icone: ListAltIcon,
         },
       ],
@@ -147,7 +147,7 @@ export function App(props) {
       subMenus: [
         {
           nome: "Vagas para Estágio",
-          path: "VagasEstagio",
+          path: "VagasEstagio", //por enquanto manda para home
           icone: WorkOutlineIcon,
         },
       ],

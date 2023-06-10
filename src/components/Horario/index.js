@@ -128,7 +128,7 @@ function Horario() {
             <p>Curso de Sistemas de Informação</p>
             <div id="container">
               <div id="header">
-                <p>8º semestre: SI 8A NOITE ( 13/02/2023 Á 26/06/2023 )</p>
+                <p>3º semestre: SI 8A NOITE ( 13/02/2020 Á 26/06/2020 )</p>
               </div>
 
               <div class="container-item">
@@ -140,10 +140,10 @@ function Horario() {
                     <b>Aula 1 ( 19h as 19h50 )</b>
                   </p>
                   <p>
-                    <b>Disciplina:</b> Sistemas Integrados de Gestão
+                    <b>Disciplina:</b> Análise e Modelagem de Sistemas
                   </p>
                   <p>
-                    <b>Prof(ª):</b> Marcel Ginotti Pereira
+                    <b>Prof(ª):</b> Edgar Hernandes
                   </p>
                   <p>
                     <b>Sala:</b> Remota
@@ -153,10 +153,10 @@ function Horario() {
                     <b>Aula 2 ( 19h50 as 20h40 )</b>
                   </p>
                   <p>
-                    <b>Disciplina:</b> Sistemas Integrados de Gestão
+                    <b>Disciplina:</b> Análise e Modelagem de Sistemas
                   </p>
                   <p>
-                    <b>Prof(ª):</b> Marcel Ginotti Pereira
+                    <b>Prof(ª):</b> Edgar Hernandes
                   </p>
                   <p>
                     <b>Sala:</b> Remota
@@ -166,10 +166,10 @@ function Horario() {
                     <b>Aula 3 ( 21h as 21h50 )</b>
                   </p>
                   <p>
-                    <b>Disciplina:</b> Sistemas Integrados de Gestão
+                    <b>Disciplina:</b> Análise e Modelagem de Sistemas
                   </p>
                   <p>
-                    <b>Prof(ª):</b> Marcel Ginotti Pereira
+                    <b>Prof(ª):</b> Edgar Hernandes
                   </p>
                   <p>
                     <b>Sala:</b> Remota
@@ -179,10 +179,10 @@ function Horario() {
                     <b>Aula 4 ( 21h50 as 22h40 )</b>
                   </p>
                   <p>
-                    <b>Disciplina:</b> Sistemas Integrados de Gestão
+                    <b>Disciplina:</b> Análise e Modelagem de Sistemas
                   </p>
                   <p>
-                    <b>Prof(ª):</b> Marcel Ginotti Pereira
+                    <b>Prof(ª):</b> Edgar Hernandes
                   </p>
                   <p>
                     <b>Sala:</b> Remota
@@ -200,10 +200,10 @@ function Horario() {
                     <b>Aula 1 ( 19h as 19h50 )</b>
                   </p>
                   <p>
-                    <b>Disciplina:</b> Trabalho de Conclusão de Curso TCC II
+                    <b>Disciplina:</b> Desenvolvimento de Aplicações Distribuídas
                   </p>
                   <p>
-                    <b>Prof(ª):</b> Gilberto Alves Pereira
+                    <b>Prof(ª):</b> Victor Williams Stafusa da Silva
                   </p>
                   <p>
                     <b>Sala:</b> Remota
@@ -213,10 +213,11 @@ function Horario() {
                     <b>Aula 2 ( 19h50 as 20h40 )</b>
                   </p>
                   <p>
-                    <b>Disciplina:</b> Trabalho de Conclusão de Curso TCC II
+                    <b>Disciplina:</b> Desenvolvimento de Aplicações Distribuídas
                   </p>
                   <p>
-                    <b>Prof(ª):</b> Gilberto Alves Pereira
+                    <b>Prof(ª):</b> Victor Williams Stafusa da Silva
+
                   </p>
                   <p>
                     <b>Sala:</b> Remota
@@ -226,10 +227,11 @@ function Horario() {
                     <b>Aula 3 ( 21h as 21h50 )</b>
                   </p>
                   <p>
-                    <b>Disciplina:</b> Trabalho de Conclusão de Curso TCC II
+                    <b>Disciplina:</b> Desenvolvimento de Aplicações Distribuídas
                   </p>
                   <p>
-                    <b>Prof(ª):</b> Gilberto Alves Pereira
+                    <b>Prof(ª):</b> Victor Williams Stafusa da Silva
+
                   </p>
                   <p>
                     <b>Sala:</b> Remota
@@ -239,10 +241,11 @@ function Horario() {
                     <b>Aula 4 ( 21h50 as 22h40 )</b>
                   </p>
                   <p>
-                    <b>Disciplina:</b> Trabalho de Conclusão de Curso TCC II
+                    <b>Disciplina:</b> Desenvolvimento de Aplicações Distribuídas
                   </p>
                   <p>
-                    <b>Prof(ª):</b> Gilberto Alves Pereira
+                    <b>Prof(ª):</b> Victor Williams Stafusa da Silva
+
                   </p>
                   <p>
                     <b>Sala:</b> Remota
@@ -260,52 +263,172 @@ function Horario() {
                     <b>Aula 1 ( 19h as 19h50 )</b>
                   </p>
                   <p>
-                    <b>Disciplina:</b> Computação Cognitiva
+                    <b>Disciplina:</b> Engenharia de Requisitos
                   </p>
                   <p>
-                    <b>Prof(ª):</b> Roberto Ângelo Fernandes
+                    <b>Prof(ª):</b> Osvaldo Takai
                   </p>
                   <p>
-                    <b>Sala:</b> Lab 02 Paraíso
+                    <b>Sala:</b> Remota
                   </p>
                   <hr></hr>
                   <p>
                     <b>Aula 2 ( 19h50 as 20h40 )</b>
                   </p>
                   <p>
-                    <b>Disciplina:</b> Computação Cognitiva
+                    <b>Disciplina:</b> Engenharia de Requisitos
                   </p>
                   <p>
-                    <b>Prof(ª):</b> Roberto Ângelo Fernandes
+                    <b>Prof(ª):</b> Osvaldo Takai
                   </p>
                   <p>
-                    <b>Sala:</b> Lab 02 Paraíso
+                    <b>Sala:</b> Remota
                   </p>
                   <hr></hr>
                   <p>
                     <b>Aula 3 ( 21h as 21h50 )</b>
                   </p>
                   <p>
-                    <b>Disciplina:</b> Computação Cognitiva
+                    <b>Disciplina:</b> Engenharia de Requisitos
                   </p>
                   <p>
-                    <b>Prof(ª):</b> Roberto Ângelo Fernandes
+                    <b>Prof(ª):</b> Osvaldo Takai
                   </p>
                   <p>
-                    <b>Sala:</b> Lab 02 Paraíso
+                    <b>Sala:</b> Remota
                   </p>
                   <hr></hr>
                   <p>
                     <b>Aula 4 ( 21h50 as 22h40 )</b>
                   </p>
                   <p>
-                    <b>Disciplina:</b> Computação Cognitiva
+                    <b>Disciplina:</b> Engenharia de Requisitos
                   </p>
                   <p>
-                    <b>Prof(ª):</b> Roberto Ângelo Fernandes
+                    <b>Prof(ª):</b> Osvaldo Takai
                   </p>
                   <p>
-                    <b>Sala:</b> Lab 02 Paraíso
+                    <b>Sala:</b> Remota
+                  </p>
+                  <hr></hr>
+                  <br></br>
+                </div>
+              </div>
+              <div class="container-item">
+                <div class="item-header">
+                  <p>Quinta</p>
+                </div>
+                <div class="item-container">
+                  <p>
+                    <b>Aula 1 ( 19h as 19h50 )</b>
+                  </p>
+                  <p>
+                    <b>Disciplina:</b> Estrutura de Dados
+                  </p>
+                  <p>
+                    <b>Prof(ª):</b> Rafael Will Macedo de Araujo
+                  </p>
+                  <p>
+                    <b>Sala:</b> Remota
+                  </p>
+                  <hr></hr>
+                  <p>
+                    <b>Aula 2 ( 19h50 as 20h40 )</b>
+                  </p>
+                  <p>
+                    <b>Disciplina:</b> Estrutura de Dados
+                  </p>
+                  <p>
+                    <b>Prof(ª):</b> Rafael Will Macedo de Araujo
+                  </p>
+                  <p>
+                    <b>Sala:</b> Remota
+                  </p>
+                  <hr></hr>
+                  <p>
+                    <b>Aula 3 ( 21h as 21h50 )</b>
+                  </p>
+                  <p>
+                    <b>Disciplina:</b> Estrutura de Dados
+                  </p>
+                  <p>
+                    <b>Prof(ª):</b> Rafael Will Macedo de Araujo
+                  </p>
+                  <p>
+                    <b>Sala:</b> Remota
+                  </p>
+                  <hr></hr>
+                  <p>
+                    <b>Aula 4 ( 21h50 as 22h40 )</b>
+                  </p>
+                  <p>
+                    <b>Disciplina:</b> Estrutura de Dados
+                  </p>
+                  <p>
+                    <b>Prof(ª):</b> Rafael Will Macedo de Araujo
+                  </p>
+                  <p>
+                    <b>Sala:</b> Remota
+                  </p>
+                  <hr></hr>
+                  <br></br>
+                </div>
+              </div>
+              <div class="container-item">
+                <div class="item-header">
+                  <p>Sexta</p>
+                </div>
+                <div class="item-container">
+                  <p>
+                    <b>Aula 1 ( 19h as 19h50 )</b>
+                  </p>
+                  <p>
+                    <b>Disciplina:</b> Oficina de Projeto de Empresa 1
+                  </p>
+                  <p>
+                    <b>Prof(ª):</b> Marco Antônio Tomé
+                  </p>
+                  <p>
+                    <b>Sala:</b> Remota
+                  </p>
+                  <hr></hr>
+                  <p>
+                    <b>Aula 2 ( 19h50 as 20h40 )</b>
+                  </p>
+                  <p>
+                    <b>Disciplina:</b> Oficina de Projeto de Empresa 1
+                  </p>
+                  <p>
+                    <b>Prof(ª):</b> Marco Antônio Tomé
+                  </p>
+                  <p>
+                    <b>Sala:</b> Remota
+                  </p>
+                  <hr></hr>
+                  <p>
+                    <b>Aula 3 ( 21h as 21h50 )</b>
+                  </p>
+                  <p>
+                    <b>Disciplina:</b> Oficina de Projeto de Empresa 1
+                  </p>
+                  <p>
+                    <b>Prof(ª):</b> Marco Antônio Tomé
+                  </p>
+                  <p>
+                    <b>Sala:</b> Remota
+                  </p>
+                  <hr></hr>
+                  <p>
+                    <b>Aula 4 ( 21h50 as 22h40 )</b>
+                  </p>
+                  <p>
+                    <b>Disciplina:</b> Engenharia de Requisitos
+                  </p>
+                  <p>
+                    <b>Prof(ª):</b> Marco Antônio Tomé
+                  </p>
+                  <p>
+                    <b>Sala:</b> Remota
                   </p>
                   <hr></hr>
                   <br></br>
@@ -317,55 +440,56 @@ function Horario() {
                 </div>
                 <div class="item-container">
                   <p>
-                    <b>Disciplina:</b> Governança de TI
-                  </p>
-                  <p>
-                    <b>Prof(ª):</b> Mariana Alexandre Hendges dos Santos
-                  </p>
-                  <p>
                     <b>Aula 1 ( 19h as 19h50 )</b>
                   </p>
                   <p>
-                    <b>Sala:</b> Lab 02 Paraíso
+                    <b>Disciplina:</b> Interface Homem Computador
+                  </p>
+                  <p>
+                    <b>Prof(ª):</b> Lívia Rosa de Carvalho Sousa
+                  </p>
+                  
+                  <p>
+                    <b>Sala:</b> Remota
                   </p>
                   <hr></hr>
                   <p>
                     <b>Aula 2 ( 19h50 as 20h40 )</b>
                   </p>
                   <p>
-                    <b>Disciplina:</b> Computação Cognitiva
+                    <b>Disciplina:</b> Interface Homem Computador
                   </p>
                   <p>
-                    <b>Prof(ª):</b> Roberto Ângelo Fernandes
+                    <b>Prof(ª):</b> Lívia Rosa de Carvalho Sousa
                   </p>
                   <p>
-                    <b>Sala:</b> Lab 02 Paraíso
+                    <b>Sala:</b> Remota
                   </p>
                   <hr></hr>
                   <p>
                     <b>Aula 3 ( 21h as 21h50 )</b>
                   </p>
                   <p>
-                    <b>Disciplina:</b> Computação Cognitiva
+                    <b>Disciplina:</b> Interface Homem Computador
                   </p>
                   <p>
-                    <b>Prof(ª):</b> Roberto Ângelo Fernandes
+                    <b>Prof(ª):</b> Lívia Rosa de Carvalho Sousa
                   </p>
                   <p>
-                    <b>Sala:</b> Lab 02 Paraíso
+                    <b>Sala:</b> Remota
                   </p>
                   <hr></hr>
                   <p>
                     <b>Aula 4 ( 21h50 as 22h40 )</b>
                   </p>
                   <p>
-                    <b>Disciplina:</b> Computação Cognitiva
+                    <b>Disciplina:</b> Interface Homem Computador
                   </p>
                   <p>
-                    <b>Prof(ª):</b> Roberto Ângelo Fernandes
+                    <b>Prof(ª):</b> Lívia Rosa de Carvalho Sousa
                   </p>
                   <p>
-                    <b>Sala:</b> Lab 02 Paraíso
+                    <b>Sala:</b> Remota
                   </p>
                   <hr></hr>
                   <br></br>

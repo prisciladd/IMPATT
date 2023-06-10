@@ -1,114 +1,116 @@
 import React from "react";
-import { Styles } from './Styles';
+import { Styles, Titulo } from './Styles';
 import { Link } from 'react-router-dom';
-import { Box, BoxTitle, BoxText} from "../../styles/BoxStyles";
-
+import {Box, BoxTitle, BoxText} from "../../styles/BoxStyles";
+import {
+    Breadcrumb,
+    BreadcrumbItem,
+    BreadcrumbLink,
+    Table,
+    Thead,
+    Tbody,
+    Tfoot,
+    Tr,
+    Th,
+    Td,
+    TableCaption,
+    TableContainer
+  } from '@chakra-ui/react'
 
 
 function Content(){
-    return(       
-        <Box>
-            <Styles>
-                <div class="span10" id="container-notes">
-                    <div class="title-default">
-                        <BoxTitle>
-                            <h3>NOTAS E FALTAS</h3>
-                        </BoxTitle>
-                        <div class="accessibility" count="0">
-                        </div>
+    return(   
+        <Styles>
+            <div class="span10" id="container-notes">
+                <div class="title-default">
+                    <Titulo>
+                        NOTAS E FALTAS
+                    </Titulo>
+                    <div class="accessibility" count="0">
+                    </div>
 
-                        <BoxText>
+                    <BoxText>
                         <div class="col-lg-4">
-                            <nav class="breadcrumb-container" aria-label="breadcrumb">
-                          
-
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item breadcrumb-item-home">
-                                            <a href="/">Home</a>
-                                        </li>
-                                        <li class="separator"></li>
-                                        <li class="breadcrumb-item active" aria-current="page">  Notas e Faltas</li>
-                                    </ol>
-                                  
-                       
-                            </nav>
+                            <Breadcrumb separator='>'>
+                                <BreadcrumbItem>
+                                    <BreadcrumbLink href='/'>Home</BreadcrumbLink>
+                                </BreadcrumbItem>
+                                <BreadcrumbItem isCurrentPage>
+                                    <BreadcrumbLink>Notas e Faltas</BreadcrumbLink>
+                                </BreadcrumbItem>
+                            </Breadcrumb>
+                            
                         </div>
-                        </BoxText>
-                    </div>
-                    <div class="well-fit-default span12">
-                        <BoxText>
-                        <div class="container span12" id="contents-notes">
-                            <div class="row-fluid">
-                            <div className="table-responsive">
-                               
-                                    <table className="table table-striped table-bordered table-condensed table-hover">
-                                        <thead>
-                                        <tr>
-                                            <th></th>
-                                            <th>Período</th>
-                                            <th>Curso</th>
-                                            <th>Turma</th>
-                                            <th>Série</th>
-                                            <th>Situação da Matrícula</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr className="table-light">
-                                            <td >
-                                            <Link to="/Boletim">
-                                                <button className="btn btn-boletim">
-                                                    <span className="visualization">Visualizar </span>
-                                                    <img src="/search.png" alt="Ícone de pesquisa" />
-                                                </button>
-                                            </Link>
-                                            </td>
-                                            <td>2020/2</td>
-                                            <td>Curso de Sistemas de Informação</td>
-                                            <td>SI 3B NOITE</td>
-                                            <td>3º Semestre</td>
-                                            <td>Concluída</td>
-                                        </tr>
-                                        <tr className="table-light">
-                                            <td>
-                                            <Link to="/Boletim">
-                                                <button className="btn btn-boletim">
-                                                    <span className="visualization">Visualizar </span>
-                                                    <img src="/search.png" alt="Ícone de pesquisa" />
-                                                </button>
-                                            </Link>
-                                            </td>
-                                            <td>2020/1</td>
-                                            <td>Curso de Sistemas de Informação</td>
-                                            <td>SI 2B NOITE</td>
-                                            <td>2º Semestre</td>
-                                            <td>Concluída</td>
-                                        </tr>
-                                        <tr className="table-light">
-                                            <td>
-                                            <Link to="/Boletim">
-                                                <button className="btn btn-boletim">
-                                                    <span className="visualization">Visualizar </span>
-                                                    <img src="/search.png" alt="Ícone de pesquisa" />
-                                                </button>
-                                            </Link>
-                                            </td>
-                                            <td>2019/2</td>
-                                            <td>Curso de Sistemas de Informação</td>
-                                            <td>SI 1B NOITE</td>
-                                            <td>1º Semestre</td>
-                                            <td>Concluída</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                         
-                            </div>
-                            </div>
-                        </div>
-                        </BoxText>
-                    </div>
-                </div>                
-            </Styles>
-        </Box> 
+                    </BoxText>
+                </div>
+                <div class="well-fit-default span12">
+                        
+                    <TableContainer>                            
+                        <Table  variant="striped" colorScheme="teal" size="sm">
+                            <Thead>
+                                <Tr>
+                                <Th></Th>
+                                <Th>Período</Th>
+                                <Th>Curso</Th>
+                                <Th>Turma</Th>
+                                <Th>Série</Th>
+                                <Th>Situação da Matrícula</Th>
+                                </Tr>
+                            </Thead>
+                            <Tbody>
+                                <Tr>
+                                <Td>
+                                    <Link to="/Boletim">
+                                    <button colorScheme="blue" size="lg" className="btn btn-boletim">
+                                        <span className="visualization">Visualizar </span>
+                                        <img src="/search.png" alt="Ícone de pesquisa" />
+                                    </button>
+                                    </Link>
+                                </Td>
+                                <Td>2020/2</Td>
+                                <Td>Curso de Sistemas de Informação</Td>
+                                <Td>SI 3B NOITE</Td>
+                                <Td>3º Semestre</Td>
+                                <Td>Ativa</Td>
+                                </Tr>
+                                <Tr>
+                                <Td>
+                                    <Link to="/Boletim">
+                                    <button colorScheme="blue" size="lg" className="btn btn-boletim">
+                                        <span className="visualization">Visualizar </span>
+                                        <img src="/search.png" alt="Ícone de pesquisa" />
+                                    </button>
+                                    </Link>
+                                </Td>
+                                <Td>2020/1</Td>
+                                <Td>Curso de Sistemas de Informação</Td>
+                                <Td>SI 2B NOITE</Td>
+                                <Td>2º Semestre</Td>
+                                <Td>Concluída</Td>
+                                </Tr>
+                                <Tr>
+                                <Td>
+                                    <Link to="/Boletim">
+                                    <button colorScheme="blue" size="lg" className="btn btn-boletim">
+                                        <span className="visualization">Visualizar </span>
+                                        <img src="/search.png" alt="Ícone de pesquisa" />
+                                    </button>
+                                    </Link>
+                                </Td>
+                                <Td>2019/2</Td>
+                                <Td>Curso de Sistemas de Informação</Td>
+                                <Td>SI 1B NOITE</Td>
+                                <Td>1º Semestre</Td>
+                                <Td>Concluída</Td>
+                                </Tr>
+                            </Tbody>
+                        </Table>
+                    
+                    </TableContainer>                          
+                
+                </div>
+            </div>                
+        </Styles>
     );
 
 }
