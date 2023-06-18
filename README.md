@@ -1,14 +1,13 @@
 # IMPATT PWA
 
-O aplicativo IMPATT PWA é um aplicativo feito como experimento para o trabalho de término de curso do grupo STADIA 2023 da Faculdade Impacta Tecnologia, com objetivo de expor as vantagens e desvantagens da aplicação do Progress Web App ou Aplicativos Web Progressivos. Como alvo  da aplicação do PWA usamos o Portal do aluno da faculdade, por atender critérios como:
-Ser uma aplicação web tradicional, pela familiaridade comum entre o grupo, pode aplicar uma pesquisa mais direcionada. os principais módulos para que foram clonados: Notas e Faltas, Quadro de horário, vagas de estágio e tela principal. A escolha de tais  módulos foi guiada por uma pesquisa aplicada com alunos sobre seu acesso e principais módulos de acesso
+O aplicativo IMPATT PWA é um experimento desenvolvido pelo grupo STADIA 2023 da Faculdade Impacta Tecnologia como trabalho de conclusão de curso. Seu objetivo é demonstrar as vantagens e desvantagens dos Progressive Web Apps (PWAs). O PWA escolhido para o experimento é o Portal do Aluno da faculdade, devido à sua natureza como aplicação web tradicional e à familiaridade do grupo. Os principais módulos clonados foram: Notas e Faltas, Quadro de Horários, Vagas de Estágio e Tela Principal. A escolha desses módulos foi baseada em uma pesquisa aplicada aos alunos sobre seus principais acessos e módulos de interesse.
 
 ## Recursos
 
-- Responsividade 1: Adaptacao a diferences tamanhos telas Desktop e Mobile atendendo o usuarios no seus diversos dispotivos 
-- Navegabilidade 2: Navegação clara e organizada por meio de menus, botões, links oferecendo experiência contínua entre ambos os formatos de tela testados.
-- Conectividade/Acesso Off-line 3: Por meio do Service Worker, pós instalado no primeiro acesso oferece ao usuario navegacao mais rapida offline.
-- Recurso 3: Com a implementação do uso de notificações e possbilidade de instacao do app na tela principal, oferece maior enjamento entre o usuario e a aplicacao
+- Responsividade: Adaptação a diferentes tamanhos de tela em dispositivos desktop e mobile, atendendo aos usuários em suas diversas plataformas.
+- Navegabilidade: Navegação clara e organizada por meio de menus, botões e links, oferecendo uma experiência consistente em ambos os formatos de tela testados.
+- Conectividade/Acesso Offline: Por meio do Service Worker, é oferecida aos usuários uma navegação mais rápida offline após a primeira instalação.
+- Recurso de Notificações: Com a implementação do uso de notificações e a possibilidade de instalação do aplicativo na tela principal, é promovido um maior engajamento entre o usuário e a aplicação.
 
 ## Instalação
 
@@ -20,12 +19,14 @@ Ser uma aplicação web tradicional, pela familiaridade comum entre o grupo, pod
    npm install
    ```
 
-2. Execute em desenvolvimento:
+2. Execute em modo de desenvolvimento:
 
    ```bash
    npm start
    ```
-### Para versão de produção ( o Service Worker só é completamente ativado neste comando)
+
+### Para versão de produção (o Service Worker é ativado completamente neste comando)
+
 1. Instale as dependências:
    
    ```bash
@@ -40,16 +41,15 @@ Ser uma aplicação web tradicional, pela familiaridade comum entre o grupo, pod
    ```bash
    serve -s build
    ```
+
 ## Como usar
 
 1. Abra o aplicativo em um navegador.
-2. Autorize receber notificações
-3. Ao receber a mensagem para instalação, autorize a instalação ( navegador Safari é necessário selecionar `adicionar à tela inicial` diretamente nas opções do navegador manualmente).
-4. Navegue no aplicativo.
-5. Teste sem conectividade com a internet.
-6. Aguarda a notificação fora do aplicativo.
-
-
+2. Autorize o recebimento de notificações.
+3. Ao receber a mensagem para instalação, autorize a instalação (no navegador Safari, é necessário selecionar "Adicionar à Tela Inicial" nas opções do navegador manualmente).
+4. Navegue pelo aplicativo.
+5. Teste o aplicativo sem conectividade com a internet.
+6. Aguarde notificações mesmo fora do aplicativo.
 
 ## Tecnologias utilizadas
 
@@ -61,33 +61,23 @@ Ser uma aplicação web tradicional, pela familiaridade comum entre o grupo, pod
 - LocalStorage
 - Firebase
 
-
 ## Autor
 
 Gabriel dos Santos Motroni,
 Priscila da Dalt,
 Matheus Silva Marques
+
 ## Recursos adicionais
 
-### Link para acesso versão produção
-atualmenteo aplicativo está disponivel em produção acessivel atraves de:
-[Link para acesso clique aqui](https://impatt-git-main-prisciladd.vercel.app/)
+### Link para acessar a versão de produção
+
+Atualmente, o aplicativo está disponível em produção e pode ser acessado através do seguinte link:
+[Link para acesso - clique aqui](https://impatt-git-main-prisciladd.vercel.app/)
 
 ### Arquitetura:
 
-A arquitetura utilizada no React foi componentes.
+A arquitetura utilizada no React foi baseada em componentes.
 
-- src: O diretório principal que contém todo o código-fonte do aplicativo React.
+- src: Diretório principal que contém todo o código-fonte do aplicativo React.
 - components: Contém os componentes reutilizáveis do aplicativo.
 - styles: Contém os arquivos de estilo CSS ou pré-processados.
-- utils: Contém utilitários e funções auxiliares do aplicativo.
-- public: O diretório que contém arquivos estáticos, como o arquivo HTML base do aplicativo.
-- .env: quando projeto inicialmente localmente, usado para configurar variveis de ambiente refente os token/chaves necessario para conexão com Firebase qua
-- index.js: O ponto de entrada do aplicativo React, responsável por renderizar o componente raiz no elemento HTML do DOM.
-- App.js: O componente raiz do aplicativo, que contém a estrutura geral do aplicativo e define as rotas ou a lógica principal.
-- package.json: O arquivo de configuração do projeto que contém as dependências, scripts de execução e outras informações relevantes.
-
-
-
-
-
